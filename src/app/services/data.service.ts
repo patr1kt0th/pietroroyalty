@@ -16,8 +16,12 @@ export class DataService {
 
   // tslint:disable-next-line: variable-name
   _posts: Post[];
+  // tslint:disable-next-line: variable-name
+  _tags: Set<string>;
 
-  constructor(private http: HttpClient, private translateService: TranslateService) {}
+  constructor(private http: HttpClient, private translateService: TranslateService) {
+    this._tags = new Set();
+  }
 
   async initializeData(): Promise<Post[]> {
     this.translateService.use(this.languageCode);
@@ -46,7 +50,15 @@ export class DataService {
     }
     return this.http.get<IPost[]>(`/assets/posts/${this.translateService.currentLang}.json`).pipe(
       map(posts => posts.map(post => new Post(post))),
-      tap(posts => (this._posts = posts))
+      tap(posts => {
+        this._posts = posts;
+        // get used tags
+        posts.forEach(p => p.tags.forEach(t => this._tags.add(t)));
+      })
     );
+  }
+
+  get tags(): string[] {
+    return [...this._tags];
   }
 }

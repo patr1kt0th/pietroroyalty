@@ -5,11 +5,15 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./pages/posts/posts.module').then(m => m.PostsPageModule)
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule)
   },
   {
-    path: 'post/:id',
-    loadChildren: () => import('./pages/post/post.module').then(m => m.PostPageModule)
+    path: 'blog',
+    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule)
+  },
+  {
+    path: 'blog/:id',
+    loadChildren: () => import('./pages/blog/post/post.module').then(m => m.PostPageModule)
   }
 ];
 

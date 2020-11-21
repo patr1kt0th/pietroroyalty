@@ -48,27 +48,20 @@ export abstract class BasePage {
   /* Menu */
 
   openMainMenu(): void {
-    console.log('opening main menu');
-    // this.closeSearchMenu();
-    // this.menuCtrl.enable(true, 'main-menu');
+    this.menuCtrl.enable(true, 'main-menu');
     this.menuCtrl.open('main-menu');
   }
 
   closeMainMenu(): void {
-    console.log('closing main menu');
     this.menuCtrl.close('main-menu');
   }
 
   openSearchMenu(): void {
-    console.log('opening search menu');
-    // this.closeMainMenu();
     this.menuCtrl.enable(true, 'search-menu');
-    // this.menuCtrl.enable(false, 'main-menu');
     this.menuCtrl.open('search-menu');
   }
 
   closeSearchMenu(): void {
-    console.log('closing search menu');
     this.menuCtrl.close('search-menu');
   }
 

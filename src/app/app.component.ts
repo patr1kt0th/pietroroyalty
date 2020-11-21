@@ -15,6 +15,9 @@ import { DataService } from './services/data.service';
 export class AppComponent implements OnInit {
   initialization = true;
 
+  enLanguage = true;
+  nightMode = false;
+
   constructor(
     private router: Router,
     private platform: Platform,
@@ -38,29 +41,27 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {}
 
+  get isPlatformDesktop(): boolean {
+    return this.platform.is('desktop');
+  }
+
+  get isPlatformCordova(): boolean {
+    return this.platform.is('cordova');
+  }
+
+  get isPlatformIOS(): boolean {
+    return this.platform.is('ios');
+  }
+
   navigate(url: string): void {
     this.router.navigateByUrl(url);
   }
 
-  openMainMenu(): void {
-    // this.closeSearchMenu();
-    // this.menuCtrl.enable(true, 'main-menu');
-    // this.menuCtrl.enable(false, 'search-menu');
-    // this.menuCtrl.open('menu');
-  }
-
   closeMainMenu(): void {
-    // this.menuCtrl.close('menu');
-  }
-
-  openSearchMenu(): void {
-    // this.closeMainMenu();
-    // this.menuCtrl.enable(true, 'search-menu');
-    // this.menuCtrl.enable(false, 'main-menu');
-    // this.menuCtrl.open('search-menu');
+    this.menuCtrl.close('main-menu');
   }
 
   closeSearchMenu(): void {
-    // this.menuCtrl.close('search-menu');
+    this.menuCtrl.close('search-menu');
   }
 }

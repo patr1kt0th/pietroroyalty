@@ -89,11 +89,17 @@
 ion-menu {
   ion-item {
     --color: var(--ion-color-tertiary);
+    // --inner-border-width: 0;
+    --border-color: var(--ion-color-medium);
   }
 
   ion-button {
     --color-hover: var(--ion-color-primary);
   }
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0;
 }
 
 ion-toolbar {
@@ -110,6 +116,18 @@ ion-button {
 
 ion-item.no-safe-area {
   --ion-safe-area-right: 0;
+}
+
+ion-toggle {
+  --background: var(--ion-color-medium);
+  --background-checked: var(--ion-color-medium);
+
+  --handle-background: var(--ion-color-primary);
+  --handle-background-checked: var(--ion-color-primary);
+}
+
+ion-footer ion-toolbar {
+  --color: var(--ion-color-medium);
 }
 
 @media (prefers-color-scheme: dark) {
