@@ -1,4 +1,5 @@
 export let skTranslations = {
+  title: 'Pietro Royalty',
   monthShortNames: 'Jan,Feb,Mar,Apr,Máj,Jún,Júl,Aug,Sep,Okt,Nov,Dec',
 
   button: {
@@ -32,5 +33,6 @@ export let skTranslations = {
     photo: 'Foto',
     video: 'Video',
     music: 'Hudba'
-  }
+  },
+  tags: 'Kategórie'
 };

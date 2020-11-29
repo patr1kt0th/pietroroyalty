@@ -1,3 +1,6 @@
+import { environment } from 'src/environments/environment';
+import { Tag } from './tag.model';
+
 export interface IPost {
   id: string;
   image: string;
@@ -13,7 +16,7 @@ export class Post {
   title: string;
   date: string | Date;
   text: string[];
-  tags: string[];
+  tags: Tag[];
 
   constructor(post: IPost) {
     this.id = post.id;
@@ -29,15 +32,15 @@ export class Post {
     } else {
       this.text = [post.text];
     }
-    this.tags = post.tags;
+    this.tags = post.tags.map(t => new Tag(t));
   }
 
   get imageSrc(): string {
-    return `/assets/images/${this.image}`;
+    return environment.base + `assets/images/${this.image}`;
   }
 
   hasTags(tags: string[]): boolean {
-    return !!this.tags.find(t => tags.includes(t));
+    return !!this.tags.find(t => tags.includes(t.name));
   }
 
   hasTag(tag: string): boolean {

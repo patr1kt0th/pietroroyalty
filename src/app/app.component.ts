@@ -1,22 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { registerLocaleData } from '@angular/common';
+import enLocale from '@angular/common/locales/en-GB';
+import skLocale from '@angular/common/locales/sk';
+import { getUserLocale } from 'get-user-locale';
 
 import { MenuController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { DataService } from './services/data.service';
+import { Filter } from './models/filter.model';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   initialization = true;
 
   enLanguage = true;
   nightMode = false;
+
+  filter: Filter;
+  filterSubscription: Subscription;
 
   constructor(
     private router: Router,
@@ -34,12 +44,24 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      await this.dataService.initializeData();
+      await this.dataService.initializeData(getUserLocale());
+      this.enLanguage = this.dataService.isEnLanguage;
+      this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
+
       this.initialization = false;
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    registerLocaleData(enLocale, 'en-GB');
+    registerLocaleData(skLocale, 'sk-SK');
+  }
+
+  ngOnDestroy(): void {
+    if (this.filterSubscription) {
+      this.filterSubscription.unsubscribe();
+    }
+  }
 
   get isPlatformDesktop(): boolean {
     return this.platform.is('desktop');
@@ -61,7 +83,18 @@ export class AppComponent implements OnInit {
     this.menuCtrl.close('main-menu');
   }
 
+  mainMenuClosed(): void {
+    this.dataService.language = this.enLanguage ? 'en' : 'sk';
+    if (this.dataService.languageChanged) {
+      this.dataService.reloadPosts();
+    }
+  }
+
   closeSearchMenu(): void {
     this.menuCtrl.close('search-menu');
+  }
+
+  searchMenuClosed(): void {
+    this.dataService.reloadPosts();
   }
 }

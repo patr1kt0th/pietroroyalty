@@ -12,7 +12,8 @@
         <ion-icon slot="icon-only" name="search-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-title color="tertiary" class="ion-text-center">Pietro Royalty</ion-title>
+    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">{{ 'title' | translate }}</ion-title>
+    <!-- <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">Pietro Royalty</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
@@ -28,6 +29,25 @@
   </ion-header> -->
 
   <ion-grid fixed="true">
+    <ion-row *ngIf="filter?.isActive">
+      <ion-col>
+        <p class="filter">
+          <ion-chip *ngIf="filter.text" outline color="tertiary" (click)="removeTextFilter()">
+            <ion-label>&quot;{{ filter.text }}&quot;</ion-label>
+            <ion-icon name="close-circle"></ion-icon>
+          </ion-chip>
+          <ion-chip
+            *ngFor="let tag of filter.selectedTags"
+            outline
+            color="tertiary"
+            (click)="removeTagFilter(tag.name)"
+          >
+            <ion-label>{{ tag.label | translate }}</ion-label>
+            <ion-icon name="close-circle"></ion-icon>
+          </ion-chip>
+        </p>
+      </ion-col>
+    </ion-row>
     <ion-row>
       <ion-col *ngFor="let post of posts" size="12" sizeMd="6" sizeLg="4">
         <ion-card>
@@ -42,10 +62,11 @@
             </ion-card-header>
           </a>
           <div class="post-info bottom-positioned">
-            <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate'}}</ion-label>
+            <!-- <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate' }}</ion-label> -->
+            <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate' : '' : locale }}</ion-label>
             <div>
-              <ion-chip (click)="filterByTag(tag)" *ngFor="let tag of post.tags" color="tertiary" slot="end"
-                >{{ getTag(tag) }}</ion-chip
+              <ion-chip (click)="filterByTag(tag.name)" *ngFor="let tag of post.tags" color="tertiary" slot="end"
+                >{{ tag.label | translate }}</ion-chip
               >
             </div>
           </div>
@@ -54,5 +75,5 @@
     </ion-row>
   </ion-grid>
 
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->
 </ion-content>

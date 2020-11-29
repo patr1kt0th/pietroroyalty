@@ -1,32 +1,36 @@
 <ion-header class="header">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button text="" defaultHref="/blog"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="share($event)">
         <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+        <!-- <ion-icon slot="icon-only" name="share-outline"></ion-icon> -->
       </ion-button>
     </ion-buttons>
-    <ion-title color="tertiary" class="ion-text-center">Pietro Royalty</ion-title>
+    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">Pietro Royalty</ion-title>
+    <!-- <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">{{ 'title' | translate }}</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true" scrollEvents="false">
   <ion-grid fixed="true">
     <ion-row>
-      <ion-col size="12">
-        <ion-card>
+      <ion-col size="12" sizeLg="6">
+        <ion-card *ngIf="post">
           <ion-img [src]="post.imageSrc"></ion-img>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12" sizeLg="6">
+        <ion-card *ngIf="post">
           <ion-card-header>
             <ion-card-title [innerHtml]="post.title" color="primary" class="ion-text-uppercase"></ion-card-title>
           </ion-card-header>
           <div class="post-info">
             <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate'}}</ion-label>
             <div>
-              <ion-chip (click)="filterByTag(tag)" *ngFor="let tag of post.tags" color="tertiary" slot="end"
-                >{{ getTag(tag) }}</ion-chip
-              >
+              <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end">{{ tag.label | translate }}</ion-chip>
             </div>
           </div>
           <ion-card-content>
@@ -37,5 +41,5 @@
     </ion-row>
   </ion-grid>
 
-  <app-footer></app-footer>
+  <!-- <app-footer></app-footer> -->
 </ion-content>

@@ -1,4 +1,5 @@
 export let enTranslations = {
+  title: 'Pietro Royalty',
   monthShortNames: 'Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec',
 
   button: {
@@ -32,5 +33,6 @@ export let enTranslations = {
     photo: 'Photo',
     video: 'Video',
     music: 'Music'
-  }
+  },
+  tags: 'Tags'
 };

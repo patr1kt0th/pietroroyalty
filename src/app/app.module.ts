@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouteReuseStrategy } from '@angular/router';
@@ -12,6 +12,8 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LocalTranslateLoader } from './shared/local-translate-loader';
+import { SharedModule } from './shared/shared.module';
+import { DataService } from './services/data.service';
 // import { AppHttpInterceptor } from './app-http.interceptor';
 
 @NgModule({
@@ -31,12 +33,14 @@ import { LocalTranslateLoader } from './shared/local-translate-loader';
         provide: TranslateLoader,
         useClass: LocalTranslateLoader
       }
-    })
+    }),
+    SharedModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    // { provide: LOCALE_ID, deps: [DataService], useFactory: (dataService: DataService) => dataService.locale }
     // { provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]

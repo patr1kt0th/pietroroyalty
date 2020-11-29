@@ -1,6 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { MenuController, Platform, AlertController, ToastController, LoadingController } from '@ionic/angular';
+import {
+  MenuController,
+  Platform,
+  AlertController,
+  ToastController,
+  LoadingController,
+  PopoverController,
+  ActionSheetController
+} from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Post } from 'src/app/models/post.model';
 import { DataService } from 'src/app/services/data.service';
@@ -15,37 +23,72 @@ export class PostPage extends BasePage implements OnInit {
   post: Post;
 
   constructor(
-    protected menuCtrl: MenuController,
     protected platform: Platform,
+    protected menuCtrl: MenuController,
     protected alertCtrl: AlertController,
     protected toastCtrl: ToastController,
     protected loadingCtrl: LoadingController,
+    protected popoverCtrl: PopoverController,
+    protected actionSheetCtrl: ActionSheetController,
+    protected translateService: TranslateService,
     protected router: Router,
     protected route: ActivatedRoute,
-    protected translateService: TranslateService,
     protected dataService: DataService
   ) {
     super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService);
   }
 
   ngOnInit() {
-    this.loadPosts();
-  }
-
-  private loadPosts() {
-    const id = this.route.snapshot.params.id;
-    this.dataService.loadPosts().subscribe(posts => {
-      this.post = posts.find(p => p.id === id);
-      // this.route.params.subscribe((params: Params) => {
-      // });
+    this.route.params.subscribe((params: Params) => {
+      const id = params.id;
+      // setTimeout(() => {
+      this.post = this.dataService.getPost(id);
+      // }, DataService.MILLISECONDS_TO_WAIT);
     });
   }
 
-  getTag(tag: string) {
-    return this.translateService.instant('tag.' + tag);
-  }
+  async share(ev: Event) {
+    // const popover = await this.popoverCtrl.create({
+    //   component: PopoverComponent,
+    //   cssClass: 'my-custom-class',
+    //   event: ev,
+    //   translucent: true
+    // });
+    // await popover.present();
 
-  showPost(id: string) {
-    this.router.navigate(['/post', id]);
+    const actionSheet = await this.actionSheetCtrl.create({
+      header: location.href,
+      cssClass: 'action-sheet',
+      buttons: [
+        {
+          text: 'Facebook',
+          icon: 'logo-facebook',
+          handler: () => {
+            console.log('Facebook clicked');
+          }
+        },
+        {
+          text: 'Twitter',
+          icon: 'logo-twitter',
+          handler: () => {
+            console.log('Twitter clicked');
+          }
+        },
+        {
+          text: 'Instagram',
+          icon: 'logo-instagram',
+          handler: () => {
+            console.log('Instagram clicked');
+          }
+        },
+        {
+          text: this.translateService.instant('button.close'),
+          icon: 'close',
+          role: 'cancel',
+          handler: () => {}
+        }
+      ]
+    });
+    await actionSheet.present();
   }
 }

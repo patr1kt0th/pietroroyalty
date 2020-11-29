@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule)
+    redirectTo: 'blog'
+    // loadChildren: () => import('./pages/blog/blog.module').then(m => m.BlogPageModule)
   },
   {
     path: 'blog',

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "blog",
+    "url": "/blog"
+  },
+  {
+    "id": "eShop",
+    "url": "/e-shop"
+  },
+  {
+    "id": "contact",
+    "url": "/contact"
+  }
+]

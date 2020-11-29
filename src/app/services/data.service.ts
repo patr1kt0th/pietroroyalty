@@ -1,10 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
 import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
+
 import { IPost, Post } from '../models/post.model';
+import { Filter } from '../models/filter.model';
+import { Tag } from '../models/tag.model';
+import { Menu, IMenuItem, MenuItem } from '../models/menu.model';
+import { registerLocaleData } from '@angular/common';
 
 @Injectable({
   providedIn: 'root'
@@ -12,53 +18,158 @@ import { IPost, Post } from '../models/post.model';
 export class DataService {
   static MILLISECONDS_TO_WAIT = 1000;
 
-  languageCode = 'en';
+  // tslint:disable-next-line: variable-name
+  private _menu: Menu;
 
   // tslint:disable-next-line: variable-name
-  _posts: Post[];
+  private _language = 'en';
   // tslint:disable-next-line: variable-name
-  _tags: Set<string>;
+  private _languageChanged = false;
+
+  // tslint:disable-next-line: variable-name
+  private _posts: BehaviorSubject<Post[]>;
+  // tslint:disable-next-line: variable-name
+  private _filter: BehaviorSubject<Filter>;
 
   constructor(private http: HttpClient, private translateService: TranslateService) {
-    this._tags = new Set();
+    this._posts = new BehaviorSubject(null);
+    this._filter = new BehaviorSubject(null);
   }
 
-  async initializeData(): Promise<Post[]> {
-    this.translateService.use(this.languageCode);
+  get menu() {
+    return this._menu;
+  }
+
+  get language(): string {
+    return this._language;
+  }
+
+  set language(lang: string) {
+    if (this._language !== lang) {
+      this._languageChanged = true;
+    }
+    this._language = lang;
+    this.translateService.use(lang);
+  }
+
+  get languageChanged(): boolean {
+    const languageChanged = this._languageChanged;
+    // reset state
+    this._languageChanged = false;
+    return languageChanged;
+  }
+
+  get isEnLanguage(): boolean {
+    return this.language === 'en';
+  }
+
+  get locale(): string {
+    const locale = this.language === 'sk' ? 'sk-SK' : 'en-GB';
+    return locale;
+  }
+
+  private get filter(): Filter {
+    return this._filter.value;
+  }
+
+  get filterObservable(): Observable<Filter> {
+    return this._filter.asObservable();
+  }
+
+  async initializeData(locale: string): Promise<void> {
+    this.translateService.setDefaultLang('en');
+    this.language = locale.substring(0, 2);
+
+    return this.refreshData();
+  }
+
+  async refreshData(): Promise<void> {
+    this._posts.next(null);
+    this._filter.next(null);
 
     return new Promise((resolve, reject) => {
       // wait to show loader
-      setTimeout(() => {
-        this.loadPosts().subscribe(
-          posts => resolve(posts),
-          error => {
-            console.log(error);
-            resolve(null);
-          }
-        );
-      }, DataService.MILLISECONDS_TO_WAIT);
+      // setTimeout(() => {
+      forkJoin([this.loadMenu(), this.loadPosts()]).subscribe(
+        () => resolve(),
+        error => {
+          console.log(error);
+          resolve(null);
+        }
+      );
+      // }, DataService.MILLISECONDS_TO_WAIT);
     });
   }
 
-  switchLanguage(lang: string): void {
-    this.languageCode = lang;
+  private get posts(): Post[] {
+    return this._posts.value;
   }
 
-  loadPosts(): Observable<Post[]> {
-    if (this._posts) {
-      return of([...this._posts]);
-    }
-    return this.http.get<IPost[]>(`/assets/posts/${this.translateService.currentLang}.json`).pipe(
+  get postsObservable(): Observable<Post[]> {
+    return this._posts.asObservable();
+  }
+
+  private loadMenu(): Observable<Menu> {
+    return this.http
+      .get<IMenuItem[]>(environment.base + `assets/data/menu.json`)
+      .pipe(
+        map(items => new Menu(items.map(i => new MenuItem(i.id, i.url, this.translateService.instant('menu.' + i.id)))))
+      );
+  }
+
+  private loadPosts(): Observable<Post[]> {
+    return this.http.get<IPost[]>(environment.base + `assets/data/blog.${this.translateService.currentLang}.json`).pipe(
       map(posts => posts.map(post => new Post(post))),
       tap(posts => {
-        this._posts = posts;
-        // get used tags
-        posts.forEach(p => p.tags.forEach(t => this._tags.add(t)));
+        this._posts.next(posts);
+
+        // create or adapt filter
+        let filter: Filter = this.filter;
+        let text: string;
+        let tags: Tag[];
+
+        if (filter) {
+          text = filter.text;
+          tags = filter.tags;
+        } else {
+          // get used tags
+          const usedTags = new Set<string>();
+          posts.forEach(p => p.tags.forEach(t => usedTags.add(t.name)));
+
+          tags = [...usedTags].map(t => new Tag(t));
+        }
+
+        // sort tags
+        tags = tags.sort((t1, t2) =>
+          this.translateService.instant(t1.label).localeCompare(this.translateService.instant(t2.label))
+        );
+
+        filter = new Filter(tags, text);
+
+        // set filter
+        this._filter.next(filter);
       })
     );
   }
 
-  get tags(): string[] {
-    return [...this._tags];
+  reloadPosts() {
+    this.loadPosts().subscribe(posts => {
+      let filteredPosts = posts;
+      if (this.filter.areTagsActive) {
+        filteredPosts = filteredPosts.filter(post => post.hasTags(this.filter.selectedTagNames));
+      }
+      if (this.filter.isSearchActive) {
+        const text = this.filter.text.toLocaleLowerCase();
+        filteredPosts = filteredPosts.filter(
+          post =>
+            post.title.toLocaleLowerCase().includes(text) || post.text.find(t => t.toLocaleLowerCase().includes(text))
+        );
+      }
+      this._posts.next(filteredPosts);
+    });
+  }
+
+  getPost(id: string) {
+    return this.posts.find(p => p.id === id);
   }
 }
