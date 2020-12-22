@@ -65,7 +65,7 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
   }
 
   removeTextFilter() {
-    this.filter.text = '';
+    this.filter.clearText();
     this.dataService.reloadPosts();
   }
 

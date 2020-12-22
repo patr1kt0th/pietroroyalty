@@ -1,12 +1,18 @@
 export interface IMenuItem {
   id: string;
-  url: string;
+  route?: string;
+  url?: string;
+  disabled: boolean;
 }
 
 export class MenuItem {
-  constructor(public id: string, public url: string, public label: string) {}
+  constructor(public id: string, public route: string, public url: string, public disabled = false) {}
+
+  get label(): string {
+    return 'menu.' + this.id;
+  }
 }
 
 export class Menu {
-  constructor(public items: MenuItem[]) {}
+  constructor(public menu: MenuItem[], public social: MenuItem[]) {}
 }

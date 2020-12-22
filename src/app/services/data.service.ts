@@ -110,11 +110,16 @@ export class DataService {
   }
 
   private loadMenu(): Observable<Menu> {
-    return this.http
-      .get<IMenuItem[]>(environment.base + `assets/data/menu.json`)
-      .pipe(
-        map(items => new Menu(items.map(i => new MenuItem(i.id, i.url, this.translateService.instant('menu.' + i.id)))))
-      );
+    return this.http.get<{ menu: IMenuItem[]; social: MenuItem[] }>(environment.base + `assets/data/menu.json`).pipe(
+      map(
+        items =>
+          new Menu(
+            items.menu.map(i => new MenuItem(i.id, i.route, i.url)),
+            items.social.map(i => new MenuItem(i.id, i.route, i.url))
+          )
+      ),
+      tap(menu => (this._menu = menu))
+    );
   }
 
   private loadPosts(): Observable<Post[]> {
@@ -125,12 +130,14 @@ export class DataService {
 
         // create or adapt filter
         let filter: Filter = this.filter;
-        let text: string;
         let tags: Tag[];
+        let text: string;
+        let active = false;
 
         if (filter) {
-          text = filter.text;
           tags = filter.tags;
+          text = filter.text;
+          active = filter.active;
         } else {
           // get used tags
           const usedTags = new Set<string>();
@@ -144,7 +151,7 @@ export class DataService {
           this.translateService.instant(t1.label).localeCompare(this.translateService.instant(t2.label))
         );
 
-        filter = new Filter(tags, text);
+        filter = new Filter(tags, text, active);
 
         // set filter
         this._filter.next(filter);
@@ -153,17 +160,20 @@ export class DataService {
   }
 
   reloadPosts() {
+    // this.filter.active = this.filter.isSet;
+    this.filter.update();
+
     this.loadPosts().subscribe(posts => {
       let filteredPosts = posts;
       if (this.filter.areTagsActive) {
         filteredPosts = filteredPosts.filter(post => post.hasTags(this.filter.selectedTagNames));
       }
+      // if (this.filter.isSearchActive) {
+      //   const text = this.filter.text.toLocaleLowerCase();
+      //   filteredPosts = filteredPosts.filter(post => post.hasText(text));
+      // }
       if (this.filter.isSearchActive) {
-        const text = this.filter.text.toLocaleLowerCase();
-        filteredPosts = filteredPosts.filter(
-          post =>
-            post.title.toLocaleLowerCase().includes(text) || post.text.find(t => t.toLocaleLowerCase().includes(text))
-        );
+        filteredPosts = filteredPosts.filter(post => post.hasTexts(this.filter.splitText()));
       }
       this._posts.next(filteredPosts);
     });

@@ -13,6 +13,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { DataService } from './services/data.service';
 import { Filter } from './models/filter.model';
 import { Subscription } from 'rxjs';
+import { Menu } from './models/menu.model';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,8 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   initialization = true;
+
+  menu: Menu;
 
   enLanguage = true;
   nightMode = false;
@@ -45,6 +48,7 @@ export class AppComponent implements OnInit, OnDestroy {
       this.splashScreen.hide();
 
       await this.dataService.initializeData(getUserLocale());
+      this.menu = this.dataService.menu;
       this.enLanguage = this.dataService.isEnLanguage;
       this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
 
@@ -55,6 +59,8 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     registerLocaleData(enLocale, 'en-GB');
     registerLocaleData(skLocale, 'sk-SK');
+
+    this.nightMode = document.body.classList.contains('dark');
   }
 
   ngOnDestroy(): void {
@@ -96,5 +102,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   searchMenuClosed(): void {
     this.dataService.reloadPosts();
+  }
+
+  modeChanged() {
+    this.nightMode = !this.nightMode;
+    document.body.classList.toggle('dark', this.nightMode);
   }
 }

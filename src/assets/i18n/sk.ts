@@ -16,7 +16,7 @@ export let skTranslations = {
 
   menu: {
     blog: 'Blog',
-    eShop: 'E-Shop',
+    eShop: 'E-shop',
     contact: 'Kontakt',
     facebook: 'Facebook',
     instagram: 'Instagram',

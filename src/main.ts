@@ -8,5 +8,9 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+document.body.classList.toggle('dark', prefersDark.matches);
+
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
   .catch(err => console.log(err));

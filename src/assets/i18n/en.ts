@@ -16,7 +16,7 @@ export let enTranslations = {
 
   menu: {
     blog: 'Blog',
-    eShop: 'E-Shop',
+    eShop: 'E-shop',
     contact: 'Contact',
     facebook: 'Facebook',
     instagram: 'Instagram',

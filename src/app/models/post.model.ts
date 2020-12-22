@@ -46,4 +46,23 @@ export class Post {
   hasTag(tag: string): boolean {
     return this.hasTags([tag]);
   }
+
+  hasTexts(texts: string[]): boolean {
+    let found = false;
+    if (texts.find(t => this.title.toLocaleLowerCase().includes(t.toLocaleLowerCase()))) {
+      found = true;
+    }
+    if (!found) {
+      texts.forEach(t => {
+        if (this.text.find(text => text.toLocaleLowerCase().includes(t.toLocaleLowerCase()))) {
+          found = true;
+        }
+      });
+    }
+    return found;
+  }
+
+  hasText(text: string): boolean {
+    return this.hasTexts([text]);
+  }
 }

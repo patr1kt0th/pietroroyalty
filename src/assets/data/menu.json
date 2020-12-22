@@ -1,14 +1,31 @@
-[
-  {
-    "id": "blog",
-    "url": "/blog"
-  },
-  {
-    "id": "eShop",
-    "url": "/e-shop"
-  },
-  {
-    "id": "contact",
-    "url": "/contact"
-  }
-]
+{
+  "menu": [
+    {
+      "id": "blog",
+      "route": "/blog"
+    },
+    {
+      "id": "eShop",
+      "route": "/e-shop",
+      "disabled": true
+    },
+    {
+      "id": "contact",
+      "url": "mailto:info@pietroroyalty.com"
+    }
+  ],
+  "social": [
+    {
+      "id": "facebook",
+      "url": "https://facebook.com/pietroroyalty"
+    },
+    {
+      "id": "twitter",
+      "url": "https://twitter.com/pietroroyalty"
+    },
+    {
+      "id": "instagram",
+      "url": "https://instagram.com/pietroroyalty"
+    }
+  ]
+}
