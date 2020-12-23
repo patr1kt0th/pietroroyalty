@@ -11,6 +11,7 @@ import { Filter } from '../models/filter.model';
 import { Tag } from '../models/tag.model';
 import { Menu, IMenuItem, MenuItem } from '../models/menu.model';
 import { registerLocaleData } from '@angular/common';
+import { IonSearchbar } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,8 @@ export class DataService {
   private _posts: BehaviorSubject<Post[]>;
   // tslint:disable-next-line: variable-name
   private _filter: BehaviorSubject<Filter>;
+
+  searchbar: IonSearchbar;
 
   constructor(private http: HttpClient, private translateService: TranslateService) {
     this._posts = new BehaviorSubject(null);
@@ -132,12 +135,10 @@ export class DataService {
         let filter: Filter = this.filter;
         let tags: Tag[];
         let text: string;
-        let active = false;
 
         if (filter) {
           tags = filter.tags;
           text = filter.text;
-          active = filter.active;
         } else {
           // get used tags
           const usedTags = new Set<string>();
@@ -151,7 +152,7 @@ export class DataService {
           this.translateService.instant(t1.label).localeCompare(this.translateService.instant(t2.label))
         );
 
-        filter = new Filter(tags, text, active);
+        filter = new Filter(tags, text);
 
         // set filter
         this._filter.next(filter);
@@ -160,9 +161,6 @@ export class DataService {
   }
 
   reloadPosts() {
-    // this.filter.active = this.filter.isSet;
-    this.filter.update();
-
     this.loadPosts().subscribe(posts => {
       let filteredPosts = posts;
       if (this.filter.areTagsActive) {

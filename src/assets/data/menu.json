@@ -1,15 +1,6 @@
 {
   "menu": [
     {
-      "id": "blog",
-      "route": "/blog"
-    },
-    {
-      "id": "eShop",
-      "route": "/e-shop",
-      "disabled": true
-    },
-    {
       "id": "contact",
       "url": "mailto:info@pietroroyalty.com"
     }

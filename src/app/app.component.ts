@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { registerLocaleData } from '@angular/common';
@@ -6,7 +6,7 @@ import enLocale from '@angular/common/locales/en-GB';
 import skLocale from '@angular/common/locales/sk';
 import { getUserLocale } from 'get-user-locale';
 
-import { MenuController, Platform } from '@ionic/angular';
+import { IonSearchbar, MenuController, Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
@@ -23,12 +23,13 @@ import { Menu } from './models/menu.model';
 export class AppComponent implements OnInit, OnDestroy {
   initialization = true;
 
+  @ViewChild('searchbar') searchbar: IonSearchbar;
   menu: Menu;
 
   enLanguage = true;
   nightMode = false;
 
-  filter: Filter;
+  filter: Filter = new Filter(null);
   filterSubscription: Subscription;
 
   constructor(
@@ -51,6 +52,9 @@ export class AppComponent implements OnInit, OnDestroy {
       this.menu = this.dataService.menu;
       this.enLanguage = this.dataService.isEnLanguage;
       this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
+
+      // set reference to IonSearchbar
+      this.dataService.searchbar = this.searchbar;
 
       this.initialization = false;
     });
@@ -96,12 +100,16 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
+  search(): void {
+    this.dataService.reloadPosts();
+  }
+
   closeSearchMenu(): void {
     this.menuCtrl.close('search-menu');
   }
 
   searchMenuClosed(): void {
-    this.dataService.reloadPosts();
+    this.search();
   }
 
   modeChanged() {

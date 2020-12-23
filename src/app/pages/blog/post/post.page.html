@@ -1,7 +1,7 @@
 <ion-header class="header">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="" defaultHref="/blog"></ion-back-button>
+      <ion-back-button text="" defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="share($event)">
@@ -32,7 +32,7 @@
             <div class="post-info">
               <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate'}}</ion-label>
               <div>
-                <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end"
+                <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end" style="cursor: auto"
                   >{{ tag.label | translate }}</ion-chip
                 >
               </div>

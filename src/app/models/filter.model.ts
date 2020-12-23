@@ -1,42 +1,29 @@
 import { Tag } from './tag.model';
 
 export class Filter {
-  // tslint:disable-next-line: variable-name
-  private _selectedTags: Tag[];
-  // tslint:disable-next-line: variable-name
-  private _enteredText: string;
-
-  constructor(public tags: Tag[], public text?: string, public active = false) {
-    this.update();
-  }
+  constructor(public tags: Tag[], public text?: string) {}
 
   setTagSelection(tag: string, selected: boolean) {
     this.tags.find(t => t.name === tag).selected = selected;
-    this.update();
   }
 
   clearText() {
     this.text = '';
-    this._enteredText = '';
   }
 
   splitText(): string[] {
     return this.text.split(' ');
   }
 
-  get enteredText(): string {
-    return this._enteredText;
-  }
-
   get selectedTags(): Tag[] {
-    return this._selectedTags;
+    return this.tags.filter(t => t.selected);
   }
 
   get selectedTagNames(): string[] {
-    return this._selectedTags.map(t => t.name);
+    return this.selectedTags.map(t => t.name);
   }
 
-  get isSet(): boolean {
+  get active(): boolean {
     return this.isSearchActive || this.areTagsActive;
   }
 
@@ -46,11 +33,5 @@ export class Filter {
 
   get areTagsActive(): boolean {
     return this.selectedTags?.length > 0;
-  }
-
-  update() {
-    this._enteredText = this.text;
-    this._selectedTags = this.tags.filter(t => t.selected);
-    this.active = this.isSet;
   }
 }

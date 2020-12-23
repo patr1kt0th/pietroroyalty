@@ -30,7 +30,7 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
     protected translateService: TranslateService,
     protected dataService: DataService
   ) {
-    super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService);
+    super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService, dataService);
   }
 
   ngOnInit() {

@@ -12,28 +12,29 @@
     <ion-content>
       <ion-list lines="none" class="menu">
         <ng-container *ngFor="let item of menu?.menu">
-          <ion-item *ngIf="item.route" button (click)="navigate(item.route)">{{ item.label | translate }}</ion-item>
-          <ion-item *ngIf="item.url" button [href]="item.url">{{ item.label | translate }}</ion-item>
+          <ion-item *ngIf="item.route" button (click)="navigate(item.route)" detail="false">{{
+            item.label | translate
+          }}</ion-item>
+          <ion-item *ngIf="item.url" button [href]="item.url" detail="false">{{ item.label | translate }}</ion-item>
         </ng-container>
       </ion-list>
       <ion-list lines="none" class="social">
         <ion-item *ngFor="let social of menu?.social" button detail="false" [href]="social.url">
-          {{ social.label | translate }}
-          <ion-icon [name]="'logo-' + social.id" slot="end" color="tertiary"></ion-icon>
+          <ion-icon [name]="'logo-' + social.id" slot="start" color="primary"></ion-icon>
         </ion-item>
       </ion-list>
       <!-- <ion-list *ngIf="!isPlatformIOS" lines="none" style="border-top: 1px solid var(--ion-color-medium)"> -->
       <ion-list *ngIf="!isPlatformIOS" lines="none" class="settings">
         <ion-item>
-          <ion-icon name="sunny-outline" [color]="nightMode ? 'medium' : 'primary'"></ion-icon>
+          <ion-icon name="sunny-outline" [color]="nightMode ? 'secondary' : 'primary'"></ion-icon>
           <!-- <ion-toggle [(ngModel)]="nightMode"></ion-toggle> -->
           <ion-toggle (ionChange)="modeChanged()" [ngModel]="nightMode"></ion-toggle>
-          <ion-icon name="moon-outline" [color]="nightMode ? 'primary' : 'medium'"></ion-icon>
+          <ion-icon name="moon-outline" [color]="nightMode ? 'primary' : 'secondary'"></ion-icon>
         </ion-item>
         <ion-item>
-          <ion-text [color]="enLanguage ? 'medium' : 'primary'">SK</ion-text>
+          <ion-text [color]="enLanguage ? 'secondary' : 'primary'">SK</ion-text>
           <ion-toggle [(ngModel)]="enLanguage"></ion-toggle>
-          <ion-text [color]="enLanguage ? 'primary' : 'medium'">EN</ion-text>
+          <ion-text [color]="enLanguage ? 'primary' : 'secondary'">EN</ion-text>
         </ion-item>
       </ion-list>
       <!-- <ion-list *ngIf="isPlatformIOS" lines="none" style="border-top: 1px solid var(--ion-color-medium)"> -->
@@ -55,7 +56,8 @@
     </ion-content>
   </ion-menu>
 
-  <ion-menu side="end" menuId="search-menu" contentId="main" (ionDidClose)="searchMenuClosed()">
+  <!-- <ion-menu side="end" menuId="search-menu" contentId="main" (ionDidClose)="searchMenuClosed()"> -->
+  <ion-menu side="end" menuId="search-menu" contentId="main">
     <ion-header class="header">
       <ion-toolbar>
         <ion-buttons slot="end">
@@ -66,19 +68,20 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-searchbar #searchbar *ngIf="filter" [(ngModel)]="filter.text" class="ion-padding-top"></ion-searchbar>
-      <ion-list lines="none">
-        <!-- <ion-item-divider>
-          <ion-label>
-            {{ 'tags' | translate }}
-          </ion-label>
-        </ion-item-divider> -->
-
+      <ion-searchbar
+        #searchbar
+        [(ngModel)]="filter.text"
+        (keyup.enter)="closeSearchMenu()"
+        (keyup.esc)="closeSearchMenu()"
+        (ionChange)="search()"
+        class="ion-padding-top"
+      ></ion-searchbar>
+      <!-- <ion-list lines="none">
         <ion-item *ngFor="let tag of filter?.tags" button detail="false" (click)="tag.selected = !tag.selected">
           {{ tag.label | translate }}
           <ion-icon *ngIf="tag.selected" name="checkmark" slot="end" color="tertiary"></ion-icon>
         </ion-item>
-      </ion-list>
+      </ion-list> -->
     </ion-content>
   </ion-menu>
 

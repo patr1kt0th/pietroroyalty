@@ -2,7 +2,7 @@ import { LoadingController, AlertController, Platform, ToastController, MenuCont
 
 import { TranslateService } from '@ngx-translate/core';
 
-// import { DataService } from '../services/data.service';
+import { DataService } from '../services/data.service';
 
 export abstract class BasePage {
   isLoading = false;
@@ -14,7 +14,8 @@ export abstract class BasePage {
     protected alertCtrl: AlertController,
     protected toastCtrl: ToastController,
     protected loadingCtrl: LoadingController,
-    protected translateService: TranslateService // protected dataService: DataService
+    protected translateService: TranslateService,
+    protected dataService: DataService
   ) {}
 
   /* Platform */
@@ -59,6 +60,10 @@ export abstract class BasePage {
   openSearchMenu(): void {
     this.menuCtrl.enable(true, 'search-menu');
     this.menuCtrl.open('search-menu');
+
+    if (this.dataService.searchbar) {
+      setTimeout(async () => await this.dataService.searchbar.setFocus(), 500);
+    }
   }
 
   closeSearchMenu(): void {

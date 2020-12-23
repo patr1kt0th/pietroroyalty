@@ -35,7 +35,7 @@ export class PostPage extends BasePage implements OnInit {
     protected route: ActivatedRoute,
     protected dataService: DataService
   ) {
-    super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService);
+    super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService, dataService);
   }
 
   ngOnInit() {
