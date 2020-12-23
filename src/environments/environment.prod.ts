@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  base: '/pietro/',
+  base: '/pietroroyalty/',
   apiUrl: 'http://localhost:8080'
 };
