@@ -3,24 +3,35 @@ import { Tag } from './tag.model';
 
 export interface IPost {
   id: string;
-  image: string;
+  preview?: boolean;
+  images: string | string[];
   title: string;
   date: string | Date;
   text: string | string[];
+  video?: string[];
   tags: string[];
 }
 
 export class Post {
   id: string;
-  image: string;
+  preview = false;
+  images: string[];
   title: string;
   date: string | Date;
   text: string[];
+  video: string[];
   tags: Tag[];
 
   constructor(post: IPost) {
     this.id = post.id;
-    this.image = post.image;
+    if (post.preview) {
+      this.preview = post.preview;
+    }
+    if (Array.isArray(post.images)) {
+      this.images = post.images;
+    } else {
+      this.images = [post.images];
+    }
     this.title = post.title;
     if (post.date instanceof Date) {
       this.date = post.date;
@@ -32,11 +43,16 @@ export class Post {
     } else {
       this.text = [post.text];
     }
+    this.video = post.video;
     this.tags = post.tags.map(t => new Tag(t));
   }
 
   get imageSrc(): string {
-    return environment.base + `assets/images/${this.image}`;
+    return environment.base + `assets/images/${this.images[0]}`;
+  }
+
+  getImageSrc(index: number): string {
+    return environment.base + `assets/images/${this.images[index]}`;
   }
 
   hasTags(tags: string[]): boolean {

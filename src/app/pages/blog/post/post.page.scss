@@ -16,6 +16,34 @@ ion-card {
   }
 }
 
+.arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  z-index: 2;
+  color: #ffffff;
+}
+.arrow.left {
+  left: 16px;
+}
+.arrow.right {
+  right: 16px;
+}
+.arrow:hover {
+  cursor: pointer;
+}
+
+// ion-slides {
+//   .swiper-container-horizontal>.swiper-pagination-bullets {
+//     bottom: 0;
+//     background-color: rgba(0, 0, 0, .2);
+//   }
+
+//   .swiper-pagination {
+//     padding: 10px 0;
+//   }
+// }
+
 @media (min-width: 768px) {
   ion-card {
     ion-card-header {

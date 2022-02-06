@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+// import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import {
   MenuController,
@@ -7,7 +8,8 @@ import {
   ToastController,
   LoadingController,
   PopoverController,
-  ActionSheetController
+  ActionSheetController,
+  IonSlides
 } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Post } from 'src/app/models/post.model';
@@ -21,6 +23,9 @@ import { BasePage } from 'src/app/shared/base.page';
 })
 export class PostPage extends BasePage implements OnInit {
   post: Post;
+  // trustedUrls: Map<string, SafeResourceUrl>;
+
+  @ViewChild('slider') slider: IonSlides;
 
   constructor(
     protected platform: Platform,
@@ -33,7 +38,8 @@ export class PostPage extends BasePage implements OnInit {
     protected translateService: TranslateService,
     protected router: Router,
     protected route: ActivatedRoute,
-    protected dataService: DataService
+    protected dataService: DataService,
+    // private domSanitizer: DomSanitizer
   ) {
     super(platform, menuCtrl, alertCtrl, toastCtrl, loadingCtrl, translateService, dataService);
   }
@@ -43,8 +49,30 @@ export class PostPage extends BasePage implements OnInit {
       const id = params.id;
       // setTimeout(() => {
       this.post = this.dataService.getPost(id);
+      // this.trustedUrls = new Map<string, SafeResourceUrl>();
+      // this.post.video.forEach(url => this.trustedUrls.set(url, this.domSanitizer.bypassSecurityTrustUrl(url)));
       // }, DataService.MILLISECONDS_TO_WAIT);
     });
+  }
+
+  slideNext() {
+    this.slider.isEnd().then((isEnd) => {
+      if (isEnd) {
+        this.slider.slideTo(0);
+      } else {
+        this.slider.slideNext();
+      }
+    });
+  }
+
+  slidePrev() {
+    this.slider.isBeginning().then((isBeginning) => {
+      if (isBeginning) {
+        this.slider.length().then((length) => this.slider.slideTo(length - 1));
+      } else {
+        this.slider.slidePrev();
+      }
+    })
   }
 
   async share(ev: Event) {

@@ -35,7 +35,7 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.postsSubscription = this.dataService.postsObservable.subscribe(posts => {
-      this.posts = posts;
+      this.posts = posts.filter(post => !post.preview);
     });
 
     this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));

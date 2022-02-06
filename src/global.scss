@@ -45,6 +45,10 @@ p.filter {
   margin: 32px 16px 0 16px;
 }
 
+iframe {
+  margin-top: 16px;
+}
+
 /* Back Button */
 
 .ios ion-back-button {
@@ -152,15 +156,15 @@ ion-card {
   }
 }
 
-.plt-desktop {
-  ion-card {
-    & > a:hover {
-      ion-img {
-        opacity: 0.9;
-      }
-    }
-  }
-}
+// .plt-desktop {
+//   ion-card {
+//     & > a:hover {
+//       ion-img {
+//         opacity: 0.9;
+//       }
+//     }
+//   }
+// }
 
 /* Searchbar */
 

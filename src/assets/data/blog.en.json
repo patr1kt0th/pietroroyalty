@@ -1,32 +1,73 @@
 [
   {
-    "id": "miami-vibes",
-    "image": "015-Miami.jpg",
-    "title": "Feel Miami's vivacious vibes at Clevelander South Beach",
-    "date": "2020-09-21",
-    "tags": ["photo", "video", "music"],
+    "id": "digitizing-old-video-tapes",
+    "preview": false,
+    "images": "VHS.jpg",
+    "title": "Digitalizácia starých videokaziet",
+    "date": "2022-06-02",
+    "tags": ["video"],
     "text": [
-      "Fusce scelerisque sit amet ex ut volutpat. In sagittis arcu id ligula luctus posuere. Nulla facilisi. Cras id erat eget nulla tristique viverra. Sed nec orci sit amet ex pellentesque tempus a vel lacus. In hac habitasse platea dictumst. Integer cursus fringilla accumsan. Aenean in urna elementum, ultricies sem vitae, dapibus elit. Nam scelerisque ornare tempus. Donec ligula purus, placerat sed risus pretium, euismod tincidunt ex. Pellentesque pretium libero eget justo consequat, quis vehicula felis congue. Pellentesque suscipit iaculis felis eu iaculis. In gravida vulputate elit ut aliquam. Ut laoreet ac mi vel interdum. Pellentesque blandit nisl lacus, ut tristique eros placerat in.",
-
-      "Sed feugiat felis sed quam aliquam sodales. Proin ac ante nulla. Quisque malesuada felis vitae viverra hendrerit. Sed purus lacus, tempor eu aliquam et, accumsan ac libero. Suspendisse ut diam dapibus, consectetur lectus quis, consectetur erat. Pellentesque iaculis dui at ligula ornare, in lacinia dui cursus. Vestibulum commodo aliquet urna, vestibulum mollis nulla suscipit eu. Nullam sit amet enim mauris.",
-
-      "Quisque vitae lacus turpis. Phasellus tortor odio, vulputate vel dapibus sed, posuere a odio. Vivamus aliquet venenatis mattis. Sed non fringilla ligula, vitae ullamcorper sem. Praesent sed facilisis est, vitae aliquam felis. Nunc vel eleifend quam. Praesent pellentesque blandit enim non efficitur. Duis convallis accumsan nibh, a vestibulum orci egestas vel. Ut sem tellus, accumsan vitae lacus at, consectetur consequat enim.",
-
-      "Etiam ultrices odio ac pulvinar tempus. Aliquam tristique quam eget odio dignissim, eget vestibulum mi ultricies. Donec vel odio vitae lorem auctor consectetur. Nullam fermentum massa sed augue congue, id dignissim arcu vestibulum. Aliquam aliquet congue tortor eget fermentum. Vivamus imperdiet turpis ante, eu aliquam odio sollicitudin vitae. Proin libero enim, malesuada quis arcu eget, varius consequat nisl. Morbi consequat orci nec orci laoreet, et fringilla nisi aliquam. Sed nisl nulla, sollicitudin a risus a, tincidunt tristique nulla. Sed arcu nisi, lacinia quis scelerisque ac, accumsan id dolor."
+      "Takmer v každej domácnosti sa nachádza jedna, dve alebo aj niekoľko desiatok VHS kaziet či iných nosičov, ktoré si dnes veľmi často nemáme kde prehrať. Postupom času sa životnosť týchto nosičov kráti a klasická videokazeta stráca každým prehratím na kvalite. Ak nechceš prísť o vzácne zábery, ktoré ti pripomínajú detstvo, minulosť alebo iné dôležité chvíle, existuje riešenie.",
+      "Je ním úprava nahrávok do digitálnej podoby. Vďaka tomu si môžeš staré videá prehrať v aktuálne najpoužívanejšom formáte H.264 aj na Smart TV, PC, tablete, mobile alebo ich napríklad hodiť na YouTube a zdieľať so známymi. Vďaka efektívnej kompresii to môže byť zaujímavé aj pre tých, ktorí potrebujú úsporne archivovať, sťahovať alebo odosielať videonahrávky.",
+      "Ak máš doma záznamy vo formátoch VHS, VHS-C, Hi8 či, MiniDV, tvoj problém je takmer vyriešený. Neváhaj a kontaktuj ma na <a href='mailto:info@qoqmedia.com'>info@qoqmedia.com</a>."
     ]
   },
   {
-    "id": "new-york-new-york",
-    "image": "013-Las_Vegas.jpg",
-    "title": "New York-New York Hotel &amp; Casino",
-    "date": "2020-10-03",
-    "tags": ["photo"],
+    "id": "burak-yeter",
+    "images": "Burak_Yeter.jpg",
+    "title": "Moja spolupráca so svetoznámym dj-om a producentom Burakom Yeterom",
+    "date": "2022-02-02",
+    "tags": ["video"],
     "text": [
-      "Etiam imperdiet elit vitae orci varius, ut consectetur sem accumsan. In accumsan sed magna at blandit. Integer viverra mi eget feugiat sodales. Nulla venenatis mattis tellus, vitae eleifend est bibendum nec. Vestibulum ac dictum lorem. Fusce a leo fringilla, sollicitudin turpis nec, lacinia neque. Aenean at maximus nisi, vitae tempus velit. Aenean at iaculis eros. Maecenas vel nulla sed nunc commodo scelerisque at ut lacus. Mauris velit quam, imperdiet et volutpat non, consequat a dui. Duis volutpat pretium vehicula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla et lorem mi. Aenean eu lorem tincidunt augue varius aliquet quis in diam.",
-
-      "Etiam ultrices odio ac pulvinar tempus. Aliquam tristique quam eget odio dignissim, eget vestibulum mi ultricies. Donec vel odio vitae lorem auctor consectetur. Nullam fermentum massa sed augue congue, id dignissim arcu vestibulum. Aliquam aliquet congue tortor eget fermentum. Vivamus imperdiet turpis ante, eu aliquam odio sollicitudin vitae. Proin libero enim, malesuada quis arcu eget, varius consequat nisl. Morbi consequat orci nec orci laoreet, et fringilla nisi aliquam. Sed nisl nulla, sollicitudin a risus a, tincidunt tristique nulla. Sed arcu nisi, lacinia quis scelerisque ac, accumsan id dolor.",
-
-      "Suspendisse accumsan justo nulla, vel sollicitudin turpis varius sit amet. Nam eu elit nec enim ultricies hendrerit sit amet eget massa. Nulla sem justo, vehicula vel porttitor bibendum, eleifend non mi. Nullam porttitor libero sit amet nisl rhoncus semper. Praesent tincidunt facilisis risus, id vulputate justo viverra laoreet. Aliquam quis ornare felis, vel dapibus est. Phasellus non dui libero. Etiam ullamcorper vel odio ac vulputate. Nulla lacinia diam urna, mollis bibendum mi euismod ac. Maecenas congue ipsum eget mi tincidunt egestas. Duis dui libero, consequat id diam ut, pretium ullamcorper diam."
+      "Počas svojej doterajšej kariéry som spolupracoval s mnohými umelcami. Jedna z najzaujímavejších spoluprác sa však začala v roku 2017.",
+      "Práve od toho obdobia totiž spolupracujem so svetoznámym DJ-om a producentom Burakom Yeterom prezývaným Mr. Tuesday. Hit Tuesday, ktorý má na YouTube viac ako 660-miliónov zhliadnutí, patrí k jeho najväčším a väčšina z vás ho veľmi dobre pozná, pretože slovenské rádiá mu poskytli veľký priestor. Na Instagrame má viac ako milión followerov a časopis DJ Mag ho v roku 2021 zaradil medzi 100 najlepších DJ-ov sveta, kde sa umiestnil na 82. mieste.",
+      "Rovnako ako väčšina výnimočných vecí, aj táto sa začala rodiť náhodne. V roku 2017 som mal telefonát od Twiinsiek, s ktorými som predtým točil videoklip, že Burak bude prvýkrát hrať v Budapešti a potrebuje poriešiť video z večernej akcie. Ponuku som prijal a vďaka tomu som sa s ním dostal do užšieho kontaktu.",
+      "Moja práca sa mu veľmi páčila a netajil veľkú spokojnosť. Hneď po odovzdaní videa som od jeho manažéra dostal ponuku vycestovať na druhý deň do Švajčiarska a natočiť ďalšiu jeho šou. A tak sa naša spolupráca neustále vyvíjala.",
+      "Do dnešného dňa sme s Burakom natočili presne dvadsať krátkych videí, v ktorých sú zachytené najlepšie momenty z koncertov, cestovania, zákulisia najväčších európskych festivalov či pohľad na Burakovo „fungovanie“ pred a po vystúpení.",
+      "Spolu sme navštívili festivaly ako Tomorrowland, Sziget, Exit, Parookaville či Budapest Park. Na tých najväčších sa počas týždňa vystrieda viac ako pol milióna ľudí z približne dvesto krajín sveta.",
+      "Táto spolupráca mi okrem nových skúseností priniesla aj návštevy európskych veľkomiest a krajín ako Holandsko, Fínsko, Belgicko, Nemecko či Litva. Mal som možnosť zažiť neskutočne unikátnu atmosféru Faerských ostrovov nachádzajúcich sa v severnej časti Atlantického oceána. Bol to úžasný pracovný výlet a zážitok na celý život.",
+      "Spolupráca s Burakom počas jeho turné mi umožnila stretnúť sa priamo na pódiu alebo v zákulisí s takými svetovými hviezdami ako Macklemore, French Montana, Williy William, Dynoro, Fedde Le Grand alebo Deniz Koyu. A čo je dôležitejšie, naučila ma, ako byť profesionálom vo svojom fachu.",
+      "Som veľmi vďačný za túto šancu a skúsenosť. Okrem pracovného vzťahu sme sa s Burakom zblížili aj kamarátsky, čo je pri spolupráci takéhoto druhu vždy skvelé. Najviac ma teší, ak ma niekomu predstaví ako svojho najlepšieho video makera. Dôveruje mi a vie, že mu stále odovzdám ten najlepší materiál a zachytený moment, ktorý už nikdy nikto nevráti."
+    ],
+    "video": ["https://www.youtube.com/embed/utcYp-vgAX4", "https://www.youtube.com/embed/TJNtcLCLvek"]
+  },
+  {
+    "id": "from-crates-oddelovace-pre-vinylove-platne",
+    "images": ["Divider_01.jpg", "Divider_02.jpg", "Divider_03.jpg", "Divider_04.jpg", "Divider_05.jpg", "Divider_06.jpg"],
+    "title": "From Crates oddeľovače pre vinylové platne",
+    "date": "2022-01-11",
+    "tags": ["music"],
+    "text": [
+      "Ak si svoju hudobnú zbierku neviete predstaviť bez vinylových LP platní, možno vás zaujme táto špecialita.",
+      "Určite to poznáte. Narýchlo potrebujete nájsť niektorú z vašich obľúbených platní, ale ako naschvál sa k nej neviete dopracovať. Postupom času vás prejde chuť aj trpezlivosť. Prinášam riešenie, ktoré vám uľahčí život, ušetrí čas a prinesie lepší prehľad o jednotlivých tituloch.",
+      "Ručne vyrobené drevené oddeľovače sa dajú ľahko umiestniť medzi jednotlivé platne. Ich veľkou výhodou je, že sú na nich zobrazené písmená, vďaka čomu si môžete svoju zbierku usporiadať v abecednom, ale aj inom, vami zvolenom poradí.",
+      "Tieto oddeľovače, ktoré sa medzi audiofilmi tešia veľkej obľube, sú určené pre 12-palcové platne.",
+      "Ak si chcete vychutnávať hudbu bez zbytočného a často odradzujúceho hľadania konkrétneho albumu, tak ste na správnom mieste.",
+      "Kontaktujte ma na <a href='mailto:info@pietroroyalty.com'>info@pietroroyalty.com</a>."
+    ]
+  },
+  {
+    "id": "preco-som-zalozil-tento-web",
+    "images": "PIETRO_ROYALTY.jpg",
+    "title": "Prečo som založil tento web?",
+    "date": "2021-05-23",
+    "tags": ["photo", "video", "music"],
+    "text": [
+      "Volám sa Peter Takáč aka PIETRO ROYALTY.",
+      "Mojím životom je umenie a všetko, čo je s ním spojené. Mám za sebou množstvo spoluprác a projektov s rôznymi domácimi a zahraničnými umelcami. Najradšej spomínam na tri turbulentné roky 2017 až 2020, počas ktorých som precestoval kus sveta spoločne so svetoznámym DJ-om Burakom Yeterom. Práve v tom čase mal vydaný veľmi úspešný singel Tuesday s viac ako pol miliardou zhliadnutí na YouTube. Na starosti som mal videoprodukciu počas jeho vystúpení na svetových festivaloch ako Tomorrowland, Sziget, Exit či Parrokaville.",
+      "Popritom som sa venoval aj iným aktivitám. Točil som videoklipy pre Ega a MGbilityho, ktorý ma poveril aj hudobnou produkciou. Spolupracoval som aj na klipe pre rapovú skupinu H16. Okrem toho som sa ako kameraman alebo strihač zúčastnil na podujatiach Red Bull BC One, Battle of the Year, The Legits Blast či Hip Hop Žije.",
+      "V roku 2015 vznikla moja hudobná produkcia pre skupinu Forsomeone, produkoval som videoklip dnes už bývalej skupiny TWiiNS a ako kameraman som začal spolupracovať s The Legits.",
+      "V mojom portfóliu sa nachádzajú aj rôzne spoločnosti. Či už sú to slovenský Red Bull, sieť nemocníc Agel, CRH, KPMG alebo Jägermeister. Spoločne s MsKS som organizoval prvé dva ročníky kultúrno-umeleckého a športového festivalu Moldava Block Party, ktorý sa tešil veľkému úspechu a prilákal predovšetkým mladú generáciu.",
+      "To je v skratke to naj, čo mám za sebou. Možno sa ale pýtaš, aký je môj príbeh.",
+      "Narodil som sa v roku 1989. Umeleckú kariéru som odštartoval ešte ako tínedžer pod prezývkou B-Boy Genic. Odmalička som veľmi rád kreslil, čo viem najmä z rozprávania mojich rodičov. Zhruba ako desaťročného ma uchvátili graffity a práve toto bol môj prvý kontakt s hip-hopovou kultúrou, ktorá ma začala formovať a sprevádza ma až dodnes.",
+      "V tom istom čase som sa stal najmladším členom vtedy ešte len krátko fungujúcej lokálnej breakingovej tanečnej skupiny Floor Rockers Crew. O päť rokov neskôr sme sa zúčastnili na Battle of the Year Slovakia, kde sme skončili na treťom mieste.",
+      "Tak ako ma graffity priviedli k tancu, tak ma tanec nasmeroval k hudbe. Keďže sme si ku choreografiám museli mixovať piesne, stretu s hudobnou produkciou som sa nevyhol. Hudba a tanec patria neodmysliteľne k sebe a tak začali vznikať vlastné experimenty, mixy a prvé beaty.",
+      "Krátko nato som nastúpil na Školu úžitkového výtvarníctva v Košiciach, kde som študoval odbor - fotografia. Počas štúdia som stále viac inklinoval k tvorbe videí, nakrúcal som a strihal vlastné videá. Vo voľnom čase som sa venoval hudbe a vyučoval som breaking v košickej tanečnej škole LMC.",
+      "Tri roky po začiatku môjho štúdia sa veci začali vyvíjať zaujímavým spôsobom. Prišiel definitívny zlom. Stal som sa členom Hasta La Muerte, momentálne jednej z najúspešnejších a najznámejších breakingových crew na Slovensku. Po pretrvávajúcich zdravotných problémoch som však tanec musel takpovediac zavesiť na klinec a moju pozornosť ešte viac zamestnávala hudba.",
+      "Po úspešnom ukončení maturitného ročníka som sa na chvíľu presťahoval do anglického Manchestru. Po návrate domov som začal podnikať a postupne sa rozbehli spolupráce, o ktorých píšem hneď na začiatku. Všetko sa zdalo byť v poriadku, ale prišiel rok 2020 a tvrdý úder pre všetky segmenty. Jednou z najviac zasiahnutých oblastí bola a stále je - kultúra. Výsledkom je, že okrem produkovania môjho albumu svoj čas trávim v spoločnosti Deutsche Telekom ako kreatívny producent.",
+      "Som nesmierne vďačný, že ma umenie sprevádza celý život, že som bol v správny čas na správnom mieste. Práve vďaka umeniu mám možnosť spolupracovať s úspešnými ľuďmi a spoločnosťami, čo mi otvorilo dvere do sveta. Navštívil som 28 krajín. Spoznávanie ich kultúr a ľudí je pre mňa najväčšou inšpiráciou. Vnímam to ako veľký úspech. To, čo robím, ma baví. A čo je ešte dôležitejšie - má to zmysel.",
+      "Prečo som založil tento web? Facebook mi nedávno zrušil všetky moje fanpage, bez udania dôvodu. Preto som sa rozhodol, že bude lepšie, ak celú moju tvorbu a diela nájdete na jednom mieste. Mám bohaté skúsenosti a slušné portfólio. V tomto priestore sa chcem podeliť o moje zručnosti, projekty, návody a rady. Chcem ich prezentovať ľuďom, ktorí možno hľadajú inšpiráciu a motiváciu.",
+      "Ak máš záujem o moje služby alebo ťa zaujíma niečo, s čím by som ti mohol a vedel pomôcť, pokojne ma kontaktuj."
     ]
   }
 ]
