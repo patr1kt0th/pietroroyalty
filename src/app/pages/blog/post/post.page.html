@@ -46,14 +46,14 @@
           <ion-card-content>
             <ion-text *ngFor="let text of post.text" [innerHtml]="text" color="primary"></ion-text>
             <div *ngIf="!!post.video">
-            <iframe *ngFor="let url of post.video"
-              width="100%"
-              height="315"
-              [src]="url | safe"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+            <div *ngFor="let url of post.video" class="video-container">
+              <iframe class="video"
+                [src]="url | safe"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
             </div>
             <div class="post-info">
               <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate'}}</ion-label>
