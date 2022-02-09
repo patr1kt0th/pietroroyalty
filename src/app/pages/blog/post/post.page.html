@@ -21,20 +21,18 @@
           <ion-img [src]="post.imageSrc"></ion-img>
         </ion-card>
         <div *ngIf="post && post.images.length > 1" style="position: relative;">
-          <div class="arrow left" (click)="slidePrev()">
-            <ion-icon name="arrow-back"></ion-icon>
+          <div *ngIf="isPlatformDesktop" class="arrow left" (click)="slidePrev()">
+            <ion-icon name="chevron-back-circle"></ion-icon>
           </div>
-          <div class="arrow right" (click)="slideNext()">
-            <ion-icon name="arrow-forward"></ion-icon>
+          <div *ngIf="isPlatformDesktop" class="arrow right" (click)="slideNext()">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
           </div>
-          <ion-slides #slider pager="true">
+          <ion-slides #slider [pager]="!isPlatformDesktop">
             <ion-slide *ngFor="let image of post.images; index as i">
               <ion-card>
                 <ion-img [src]="post.getImageSrc(i)"></ion-img>
               </ion-card>
             </ion-slide>
-            <!-- <button type="submit" float-left ion-button color="light" class="swiper-button-prev swiper-button-black" (click)="slidePrev()" [disabled]="slider.isBeginning()"></button>
-            <button type="submit" float-right ion-button color="light" class="swiper-button-next swiper-button-black" (click)="slideNext()" [disabled]="slider.isEnd()"></button> -->
           </ion-slides>
         </div>
       </ion-col>

@@ -183,6 +183,16 @@ ion-card {
   }
 }
 
+/* Slides */
+ion-slides {
+  // .swiper-pagination-bullet-active {
+  //   background: var(--ion-color-tertiary);
+  // }
+  .swiper-pagination-bullet {
+    opacity: 1;
+  }
+}
+
 /* Footer */
 
 ion-footer {

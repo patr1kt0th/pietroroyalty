@@ -348,6 +348,11 @@ ion-searchbar {
   --color: var(--ion-color-secondary);
 }
 
+ion-slides {
+  --bullet-background: var(--ion-color-secondary);
+  --bullet-background-active: var(--ion-color-tertiary);
+}
+
 app-footer {
   ion-toolbar {
     --color: var(--ion-color-medium);

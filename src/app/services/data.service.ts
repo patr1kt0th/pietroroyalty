@@ -50,6 +50,7 @@ export class DataService {
   set language(lang: string) {
     if (this._language !== lang) {
       this._languageChanged = true;
+      localStorage.setItem('pietroroyalty-language', lang);
     }
     this._language = lang;
     this.translateService.use(lang);
@@ -81,7 +82,13 @@ export class DataService {
 
   async initializeData(locale: string): Promise<void> {
     this.translateService.setDefaultLang('en');
-    this.language = locale.substring(0, 2);
+    
+    const storedLanguage = localStorage.getItem('pietroroyalty-language');
+    if (storedLanguage) {
+      this.language = storedLanguage;
+    } else {
+      this.language = locale.substring(0, 2);
+    }
 
     return this.refreshData();
   }
