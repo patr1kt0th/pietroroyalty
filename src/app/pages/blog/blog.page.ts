@@ -54,9 +54,11 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
     return this.dataService.locale;
   }
 
-  filterByTag(tag: string) {
+  filterByTag(tag: string, e: Event) {
     this.filter.setTagSelection(tag, true);
     this.dataService.reloadPosts();
+    e.preventDefault();
+    e.stopPropagation();
   }
 
   removeTagFilter(tag: string) {
