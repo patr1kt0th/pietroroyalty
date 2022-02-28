@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 import { registerLocaleData } from '@angular/common';
 import enLocale from '@angular/common/locales/en-GB';
@@ -14,6 +14,8 @@ import { DataService } from './services/data.service';
 import { Filter } from './models/filter.model';
 import { Subscription } from 'rxjs';
 import { Menu } from './models/menu.model';
+
+declare const gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -47,6 +49,12 @@ export class AppComponent implements OnInit, OnDestroy {
     this.platform.ready().then(async () => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.router.events.subscribe((event) => {
+        if (event instanceof NavigationEnd) {
+          gtag('config', 'UA-87277907-1', { 'page_path': event.urlAfterRedirects });
+        }      
+      });
 
       await this.dataService.initializeData(getUserLocale());
       this.menu = this.dataService.menu;
