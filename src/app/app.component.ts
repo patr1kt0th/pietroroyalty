@@ -28,7 +28,7 @@ export class AppComponent implements OnInit, OnDestroy {
   @ViewChild('searchbar') searchbar: IonSearchbar;
   menu: Menu;
 
-  enLanguage = true;
+  isEnLanguage = true;
   nightMode = false;
 
   filter: Filter = new Filter(null);
@@ -58,7 +58,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
       await this.dataService.initializeData(getUserLocale());
       this.menu = this.dataService.menu;
-      this.enLanguage = this.dataService.isEnLanguage;
+      this.isEnLanguage = this.dataService.isEnLanguage;
       this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
 
       // set reference to IonSearchbar
@@ -102,10 +102,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   mainMenuClosed(): void {
-    this.dataService.language = this.enLanguage ? 'en' : 'sk';
-    if (this.dataService.languageChanged) {
-      this.dataService.reloadPosts();
-    }
+    // this.languageChanged();
   }
 
   search(): void {
@@ -123,5 +120,17 @@ export class AppComponent implements OnInit, OnDestroy {
   modeChanged() {
     this.nightMode = !this.nightMode;
     document.body.classList.toggle('dark', this.nightMode);
+  }
+
+  switchLanguage() {
+    this.isEnLanguage = !this.isEnLanguage;
+    this.languageChanged();
+  }
+
+  languageChanged() {
+    this.dataService.language = this.isEnLanguage ? 'en' : 'sk';
+    if (this.dataService.languageChanged) {
+      this.dataService.reloadPosts();
+    }
   }
 }

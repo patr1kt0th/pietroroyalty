@@ -3,13 +3,14 @@
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <!-- <ion-buttons slot="end">
-      <ion-button (click)="share($event)">
-        <ion-icon slot="icon-only" name="share-social-outline"></ion-icon>
+    <ion-buttons slot="end">
+      <ion-button (click)="changeLanguage()">
+        <ion-text>{{ isEnLanguage ? 'SK' : 'EN'}}</ion-text>
+        <!-- <ion-icon slot="icon-only" name="share-social-outline"></ion-icon> -->
       </ion-button>
-    </ion-buttons> -->
-    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">Pietro Royalty</ion-title>
-    <!-- <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">{{ 'title' | translate }}</ion-title> -->
+    </ion-buttons>
+    <!-- <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">Pietro Royalty</ion-title> -->
+    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase" (click)="goToHomePage()">{{ 'title' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -54,7 +55,7 @@
             </div>
             </div>
             <div class="post-info">
-              <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate'}}</ion-label>
+              <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate' : '' : locale }}</ion-label>
               <div>
                 <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end" style="cursor: auto"
                   >{{ tag.label | translate }}</ion-chip

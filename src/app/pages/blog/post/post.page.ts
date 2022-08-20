@@ -22,6 +22,7 @@ import { BasePage } from 'src/app/shared/base.page';
   styleUrls: ['./post.page.scss']
 })
 export class PostPage extends BasePage implements OnInit {
+  postId: any;
   post: Post;
   // trustedUrls: Map<string, SafeResourceUrl>;
 
@@ -47,12 +48,17 @@ export class PostPage extends BasePage implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
+      this.postId = id;
       // setTimeout(() => {
       this.post = this.dataService.getPost(id);
       // this.trustedUrls = new Map<string, SafeResourceUrl>();
       // this.post.video.forEach(url => this.trustedUrls.set(url, this.domSanitizer.bypassSecurityTrustUrl(url)));
       // }, DataService.MILLISECONDS_TO_WAIT);
     });
+  }
+
+  goToHomePage() {
+    this.router.navigateByUrl("/");
   }
 
   slideNext() {
@@ -73,6 +79,21 @@ export class PostPage extends BasePage implements OnInit {
         this.slider.slidePrev();
       }
     })
+  }
+
+  get isEnLanguage(): boolean {
+    return this.dataService.language === 'en';
+  }
+
+  get locale(): string {
+    return this.dataService.locale;
+  }
+
+  changeLanguage() {
+    this.dataService.language = this.dataService.language === 'en' ? 'sk' : 'en';
+    this.dataService.loadPosts().subscribe(() => {
+      this.post = this.dataService.getPost(this.postId);
+    });
   }
 
   async share(ev: Event) {

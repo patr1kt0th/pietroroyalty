@@ -21,6 +21,8 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
   filterSubscription: Subscription;
   filter: Filter;
 
+  nightMode: boolean;
+
   constructor(
     protected menuCtrl: MenuController,
     protected platform: Platform,
@@ -39,6 +41,8 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
     });
 
     this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
+
+    this.nightMode = document.body.classList.contains('dark');
   }
 
   ngOnDestroy(): void {
@@ -50,8 +54,22 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
     }
   }
 
+  modeChanged() {
+    this.nightMode = !this.nightMode;
+    document.body.classList.toggle('dark', this.nightMode);
+  }
+
+  get isEnLanguage(): boolean {
+    return this.dataService.language === 'en';
+  }
+
   get locale(): string {
     return this.dataService.locale;
+  }
+
+  switchLanguage() {
+    this.dataService.language = this.dataService.language === 'en' ? 'sk' : 'en';
+    this.dataService.reloadPosts();
   }
 
   filterByTag(tag: string, e: Event) {

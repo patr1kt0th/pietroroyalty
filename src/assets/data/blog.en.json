@@ -1,73 +1,105 @@
 [
   {
-    "id": "digitizing-old-video-tapes",
-    "preview": false,
-    "images": "VHS.jpg",
-    "title": "Digitalizácia starých videokaziet",
-    "date": "2022-06-02",
-    "tags": ["video"],
+    "id": "digitization-of-old-videotapes",
+    "preview": true,
+    "images": [
+      "vhs.jpg"
+    ],
+    "title": "Digitization of old videotapes",
+    "date": "2022-03-15",
+    "tags": [
+      "video"
+    ],
     "text": [
-      "Takmer v každej domácnosti sa nachádza jedna, dve alebo aj niekoľko desiatok VHS kaziet či iných nosičov, ktoré si dnes veľmi často nemáme kde prehrať. Postupom času sa životnosť týchto nosičov kráti a klasická videokazeta stráca každým prehratím na kvalite. Ak nechceš prísť o vzácne zábery, ktoré ti pripomínajú detstvo, minulosť alebo iné dôležité chvíle, existuje riešenie.",
-      "Je ním úprava nahrávok do digitálnej podoby. Vďaka tomu si môžeš staré videá prehrať v aktuálne najpoužívanejšom formáte H.264 aj na Smart TV, PC, tablete, mobile alebo ich napríklad hodiť na YouTube a zdieľať so známymi. Vďaka efektívnej kompresii to môže byť zaujímavé aj pre tých, ktorí potrebujú úsporne archivovať, sťahovať alebo odosielať videonahrávky.",
-      "Ak máš doma záznamy vo formátoch VHS, VHS-C, Hi8 či, MiniDV, tvoj problém je takmer vyriešený. Neváhaj a kontaktuj ma na <a href='mailto:info@qoqmedia.com'>info@qoqmedia.com</a>."
+      "In many households, there is always at least one, two or several dozens of VHS videotapes or other old media storage devices, which we have often nowhere to play. As the time passes, a lifespan of these devices deteriorates. Moreover, with each replay the tapes lose their quality. Do not suffer a loss of precious scenes from the past, as the beautiful moments of your childhood or other important moments - take an action and preserve your memories with the best solution!",
+      "It is a modification of the recordings to a digital form. Thanks to a digitization, you will have a chance to play your old videos in the most using format of H.264 on your Smart TV, PC, tablet, smartphone, or you can upload them on YouTube and share with your friends. Thanks to the efficient compression, it can also be interesting for those who need to economically archive, download, or send video recordings.",
+      "If you own recordings in VHS, VHS-C, Hi8, or MiniDV, your problem is almost fixed. Do not hesitate and contact me on <a href='mailto:info@qoqmedia.com'>info@qoqmedia.com</a>."
     ]
   },
   {
     "id": "burak-yeter",
-    "images": "Burak_Yeter.jpg",
-    "title": "Moja spolupráca so svetoznámym dj-om a producentom Burakom Yeterom",
-    "date": "2022-02-02",
-    "tags": ["video"],
-    "text": [
-      "Počas svojej doterajšej kariéry som spolupracoval s mnohými umelcami. Jedna z najzaujímavejších spoluprác sa však začala v roku 2017.",
-      "Práve od toho obdobia totiž spolupracujem so svetoznámym DJ-om a producentom Burakom Yeterom prezývaným Mr. Tuesday. Hit Tuesday, ktorý má na YouTube viac ako 660-miliónov zhliadnutí, patrí k jeho najväčším a väčšina z vás ho veľmi dobre pozná, pretože slovenské rádiá mu poskytli veľký priestor. Na Instagrame má viac ako milión followerov a časopis DJ Mag ho v roku 2021 zaradil medzi 100 najlepších DJ-ov sveta, kde sa umiestnil na 82. mieste.",
-      "Rovnako ako väčšina výnimočných vecí, aj táto sa začala rodiť náhodne. V roku 2017 som mal telefonát od Twiinsiek, s ktorými som predtým točil videoklip, že Burak bude prvýkrát hrať v Budapešti a potrebuje poriešiť video z večernej akcie. Ponuku som prijal a vďaka tomu som sa s ním dostal do užšieho kontaktu.",
-      "Moja práca sa mu veľmi páčila a netajil veľkú spokojnosť. Hneď po odovzdaní videa som od jeho manažéra dostal ponuku vycestovať na druhý deň do Švajčiarska a natočiť ďalšiu jeho šou. A tak sa naša spolupráca neustále vyvíjala.",
-      "Do dnešného dňa sme s Burakom natočili presne dvadsať krátkych videí, v ktorých sú zachytené najlepšie momenty z koncertov, cestovania, zákulisia najväčších európskych festivalov či pohľad na Burakovo „fungovanie“ pred a po vystúpení.",
-      "Spolu sme navštívili festivaly ako Tomorrowland, Sziget, Exit, Parookaville či Budapest Park. Na tých najväčších sa počas týždňa vystrieda viac ako pol milióna ľudí z približne dvesto krajín sveta.",
-      "Táto spolupráca mi okrem nových skúseností priniesla aj návštevy európskych veľkomiest a krajín ako Holandsko, Fínsko, Belgicko, Nemecko či Litva. Mal som možnosť zažiť neskutočne unikátnu atmosféru Faerských ostrovov nachádzajúcich sa v severnej časti Atlantického oceána. Bol to úžasný pracovný výlet a zážitok na celý život.",
-      "Spolupráca s Burakom počas jeho turné mi umožnila stretnúť sa priamo na pódiu alebo v zákulisí s takými svetovými hviezdami ako Macklemore, French Montana, Williy William, Dynoro, Fedde Le Grand alebo Deniz Koyu. A čo je dôležitejšie, naučila ma, ako byť profesionálom vo svojom fachu.",
-      "Som veľmi vďačný za túto šancu a skúsenosť. Okrem pracovného vzťahu sme sa s Burakom zblížili aj kamarátsky, čo je pri spolupráci takéhoto druhu vždy skvelé. Najviac ma teší, ak ma niekomu predstaví ako svojho najlepšieho video makera. Dôveruje mi a vie, že mu stále odovzdám ten najlepší materiál a zachytený moment, ktorý už nikdy nikto nevráti."
+    "preview": false,
+    "images": [
+      "burak_yeter.jpg"
     ],
-    "video": ["https://www.youtube.com/embed/utcYp-vgAX4", "https://www.youtube.com/embed/TJNtcLCLvek"]
-  },
-  {
-    "id": "from-crates-oddelovace-pre-vinylove-platne",
-    "images": ["Divider_01.jpg", "Divider_02.jpg", "Divider_03.jpg", "Divider_04.jpg", "Divider_05.jpg", "Divider_06.jpg"],
-    "title": "From Crates oddeľovače pre vinylové platne",
-    "date": "2022-01-11",
-    "tags": ["music"],
+    "title": "My collaboration with world-famous DJ, Burak Yeter",
+    "date": "2022-08-12",
+    "tags": [
+      "video"
+    ],
     "text": [
-      "Ak si svoju hudobnú zbierku neviete predstaviť bez vinylových LP platní, možno vás zaujme táto špecialita.",
-      "Určite to poznáte. Narýchlo potrebujete nájsť niektorú z vašich obľúbených platní, ale ako naschvál sa k nej neviete dopracovať. Postupom času vás prejde chuť aj trpezlivosť. Prinášam riešenie, ktoré vám uľahčí život, ušetrí čas a prinesie lepší prehľad o jednotlivých tituloch.",
-      "Ručne vyrobené drevené oddeľovače sa dajú ľahko umiestniť medzi jednotlivé platne. Ich veľkou výhodou je, že sú na nich zobrazené písmená, vďaka čomu si môžete svoju zbierku usporiadať v abecednom, ale aj inom, vami zvolenom poradí.",
-      "Tieto oddeľovače, ktoré sa medzi audiofilmi tešia veľkej obľube, sú určené pre 12-palcové platne.",
-      "Ak si chcete vychutnávať hudbu bez zbytočného a často odradzujúceho hľadania konkrétneho albumu, tak ste na správnom mieste.",
-      "Kontaktujte ma na <a href='mailto:info@pietroroyalty.com'>info@pietroroyalty.com</a>."
+      "Throughout my career, I have worked with a lot of artists. However, one of the most interesting cooperations began back in 2017.",
+      "That was when I started working with a world-famous DJ and producer, Burak Yeter. His biggest hit “Tuesday” has reached over 700 million views on YouTube. Many of you know him for sure, he has had his songs played on radios all over the world. With more than one million followers on Instagram, he got listed in the DJ Mag Top 100 DJs in 2021.",
+      "Just like all the special things, this one also seemed to have come out of nowhere. In 2017, I received a call from Twiins, two singing sisters, for whom I had shot a video before. They told me Burak was going to perform in Budapest for the first time and would need a video of the event. I accepted the offer and thanks to that we got in closer contact.",
+      "He liked my work a lot and did not hesitate to express his satisfaction. Right after handing in the video, I got an offer from his manager to travel to Switzerland right the next day to shoot another show. And so our cooperation went on.",
+      "Until this day, Burak and I have shot more than twenty short videos. These capture highlights from concerts, tours, and backstage moments at the biggest European festivals, and also provide an insight into Burak's “work” before and after the shows. You can find some of the highlights at the end of this article, but all the other videos are available on his <a href='https://www.youtube.com/burakyeter'>YouTube</a>.",
+      "Together, we have been to festivals like Tomorrowland, Sziget, Exit, Sunny Hill and Parookville. More than half a million people from around 200 countries turned up at each of these festivals within a single week.",
+      "Thanks to this cooperation, besides gaining all the new experience, I got to visit a lot of European cities and countries. I had a chance to witness incredibly unique atmosphere of the Faroe Islands in the northern part of the Atlantic Ocean. It was a wonderful work trip and once-in-a-lifetime kind of experience.",
+      "Working with Burak on his tour gave me a chance to meet world-famous stars like Dua Lipa, Macklemore, French Montana, John Newman and Willy William, right on the stage or in the backstage. And, most importantly, it has taught me how to be a professional in my field.",
+      "I am beyond thankful for this chance and experience. It is not solely about the work. I have become friends with Burak, which makes our cooperation great. What brings me the biggest joy is that he introduces me to people as his best video maker. He trusts me and he knows that I will always hand in the best possible material, capturing the moment no one can ever bring back.",
+      "Photo: <a href='https://www.instagram.com/bereczky_sandor'>@bereczky_sandor</a>"
+    ],
+    "video": [
+      "https://www.youtube.com/embed/utcYp-vgAX4",
+      "https://www.youtube.com/embed/A_3KaPensHE",
+      "https://www.youtube.com/embed/TJNtcLCLvek",
+      "https://www.youtube.com/embed/FEedBvGViO4",
+      "https://www.youtube.com/embed/Kr-tJWgLZWY"
     ]
   },
   {
-    "id": "preco-som-zalozil-tento-web",
-    "images": "PIETRO_ROYALTY.jpg",
-    "title": "Prečo som založil tento web?",
-    "date": "2021-05-23",
-    "tags": ["photo", "video", "music"],
+    "id": "from-crates-vinyl-record-dividers",
+    "preview": false,
+    "images": [
+      "divider_001.jpg",
+      "divider_002.jpg",
+      "divider_003.jpg",
+      "divider_004.jpg",
+      "divider_005.jpg",
+      "divider_006.jpg"
+    ],
+    "title": "From Crates Vinyl Record Dividers Designed By Me",
+    "date": "2022-07-31",
+    "tags": [
+      "music"
+    ],
     "text": [
-      "Volám sa Peter Takáč aka PIETRO ROYALTY.",
-      "Mojím životom je umenie a všetko, čo je s ním spojené. Mám za sebou množstvo spoluprác a projektov s rôznymi domácimi a zahraničnými umelcami. Najradšej spomínam na tri turbulentné roky 2017 až 2020, počas ktorých som precestoval kus sveta spoločne so svetoznámym DJ-om Burakom Yeterom. Práve v tom čase mal vydaný veľmi úspešný singel Tuesday s viac ako pol miliardou zhliadnutí na YouTube. Na starosti som mal videoprodukciu počas jeho vystúpení na svetových festivaloch ako Tomorrowland, Sziget, Exit či Parrokaville.",
-      "Popritom som sa venoval aj iným aktivitám. Točil som videoklipy pre Ega a MGbilityho, ktorý ma poveril aj hudobnou produkciou. Spolupracoval som aj na klipe pre rapovú skupinu H16. Okrem toho som sa ako kameraman alebo strihač zúčastnil na podujatiach Red Bull BC One, Battle of the Year, The Legits Blast či Hip Hop Žije.",
-      "V roku 2015 vznikla moja hudobná produkcia pre skupinu Forsomeone, produkoval som videoklip dnes už bývalej skupiny TWiiNS a ako kameraman som začal spolupracovať s The Legits.",
-      "V mojom portfóliu sa nachádzajú aj rôzne spoločnosti. Či už sú to slovenský Red Bull, sieť nemocníc Agel, CRH, KPMG alebo Jägermeister. Spoločne s MsKS som organizoval prvé dva ročníky kultúrno-umeleckého a športového festivalu Moldava Block Party, ktorý sa tešil veľkému úspechu a prilákal predovšetkým mladú generáciu.",
-      "To je v skratke to naj, čo mám za sebou. Možno sa ale pýtaš, aký je môj príbeh.",
-      "Narodil som sa v roku 1989. Umeleckú kariéru som odštartoval ešte ako tínedžer pod prezývkou B-Boy Genic. Odmalička som veľmi rád kreslil, čo viem najmä z rozprávania mojich rodičov. Zhruba ako desaťročného ma uchvátili graffity a práve toto bol môj prvý kontakt s hip-hopovou kultúrou, ktorá ma začala formovať a sprevádza ma až dodnes.",
-      "V tom istom čase som sa stal najmladším členom vtedy ešte len krátko fungujúcej lokálnej breakingovej tanečnej skupiny Floor Rockers Crew. O päť rokov neskôr sme sa zúčastnili na Battle of the Year Slovakia, kde sme skončili na treťom mieste.",
-      "Tak ako ma graffity priviedli k tancu, tak ma tanec nasmeroval k hudbe. Keďže sme si ku choreografiám museli mixovať piesne, stretu s hudobnou produkciou som sa nevyhol. Hudba a tanec patria neodmysliteľne k sebe a tak začali vznikať vlastné experimenty, mixy a prvé beaty.",
-      "Krátko nato som nastúpil na Školu úžitkového výtvarníctva v Košiciach, kde som študoval odbor - fotografia. Počas štúdia som stále viac inklinoval k tvorbe videí, nakrúcal som a strihal vlastné videá. Vo voľnom čase som sa venoval hudbe a vyučoval som breaking v košickej tanečnej škole LMC.",
-      "Tri roky po začiatku môjho štúdia sa veci začali vyvíjať zaujímavým spôsobom. Prišiel definitívny zlom. Stal som sa členom Hasta La Muerte, momentálne jednej z najúspešnejších a najznámejších breakingových crew na Slovensku. Po pretrvávajúcich zdravotných problémoch som však tanec musel takpovediac zavesiť na klinec a moju pozornosť ešte viac zamestnávala hudba.",
-      "Po úspešnom ukončení maturitného ročníka som sa na chvíľu presťahoval do anglického Manchestru. Po návrate domov som začal podnikať a postupne sa rozbehli spolupráce, o ktorých píšem hneď na začiatku. Všetko sa zdalo byť v poriadku, ale prišiel rok 2020 a tvrdý úder pre všetky segmenty. Jednou z najviac zasiahnutých oblastí bola a stále je - kultúra. Výsledkom je, že okrem produkovania môjho albumu svoj čas trávim v spoločnosti Deutsche Telekom ako kreatívny producent.",
-      "Som nesmierne vďačný, že ma umenie sprevádza celý život, že som bol v správny čas na správnom mieste. Práve vďaka umeniu mám možnosť spolupracovať s úspešnými ľuďmi a spoločnosťami, čo mi otvorilo dvere do sveta. Navštívil som 28 krajín. Spoznávanie ich kultúr a ľudí je pre mňa najväčšou inšpiráciou. Vnímam to ako veľký úspech. To, čo robím, ma baví. A čo je ešte dôležitejšie - má to zmysel.",
-      "Prečo som založil tento web? Facebook mi nedávno zrušil všetky moje fanpage, bez udania dôvodu. Preto som sa rozhodol, že bude lepšie, ak celú moju tvorbu a diela nájdete na jednom mieste. Mám bohaté skúsenosti a slušné portfólio. V tomto priestore sa chcem podeliť o moje zručnosti, projekty, návody a rady. Chcem ich prezentovať ľuďom, ktorí možno hľadajú inšpiráciu a motiváciu.",
-      "Ak máš záujem o moje služby alebo ťa zaujíma niečo, s čím by som ti mohol a vedel pomôcť, pokojne ma kontaktuj."
+      "If you can't imagine your music collection without vinyl LPs, this product is exactly for you.",
+      "We all know it. Just when you need to find one of your favorite records, you are not able to do it. After a while you lose your taste and patience too. That's why I bring you the solution which makes your life much easier, saves your time and gives you a better overview of each individual piece of art.",
+      "27 laser-cut wooden dividers can be easily placed in-between the individual records. The letters are their great advantage, so you can organize your collection alphabetically, but also in any other order.",
+      "The dividers, being very popular among audiophiles, are designed for 12-inch records and can be used either horizontally or vertically.",
+      "If you want to enjoy music without unnecessary and often desperate search for a particular album, then you are in the right place.",
+      " ",
+      "For more information, please contact: <a href='mailto:info@fromcrates.com'>info@fromcrates.com</a> or <a href='https://ebay.to/3zK77Vp'>BUY HERE</a"
+    ]
+  },
+  {
+    "id": "why-did-i-create-this-website",
+    "preview": false,
+    "images": "pietro_royalty.jpg",
+    "title": "Why did I create this website?",
+    "date": "2022-04-15",
+    "tags": [
+      "music",
+      "photo",
+      "video"
+    ],
+    "text": [
+      "My name is Peter Takáč aka PIETRO ROYALTY.",
+      "My life is art and everything that is connected with it. I have already experienced a great amount of amazing projects and collaborations with different artists both on a national and international level. When I take a trip down memory lane, I love to recall three turbulent years between 2017 and 2020, when I travelled the globe with the world-renowned DJ Burak Yeter. Back in the days, he had just released the remarkable single “Tuesday” that have racked up more than half a billion views on YouTube so far. My job was to handle Burak's video production during his performances on world-class festivals such as Tomorrowland, Sziget, Exit or Parrokaville.",
+      "Concurrently, I also engaged in other projects. I made music video clip for Ego and worked on videos and music production with MGbility. I collaborated on the video production for a rap group H16. In addition, I worked as a cameraman and editor at events such as Red Bull BC One, Battle of the Year, The Legits Blast or Hip Hop Žije.",
+      "In 2015, I started my journey as a music producer for the Forsomeone band. In the same year, I produced music video for TWiiNS and started my collaboration with The Legits as a cameraman.",
+      "In my video portfolio, you can find variety of productions I did for companies like Red Bull, CRH, KPMG, GymBeam, Jägermeister, AGEL hospitals as well as University Hospital of L. Pasteur in Košice. I also had a chance to co-organize the first two years of the cultural, artistic and sport festival Moldava Block Party that achieved a great success especially among young generation.",
+      "Long story short, this is my experience in video and music business. What about my personal story though? Let me tell you more.",
+      "I was born in 1989. My artistic career started in my teenage years when I called myself B-Boy Genic. I really love drawing since I was a little boy, at least, this is what my parents say. Anyway, when I was 10, I got blown away by graffiti. It was my first contact with hip-hop culture which had a huge impact on me and my career. It has accompanied me up to now.",
+      "In the same time, I became the youngest member of a fresh new local breaking crew Floor Rockers Crew. Five years later, we won the 3rd place in the Battle of the Year Slovakia competition.",
+      "Just as graffiti showed me the way to dance, the dance got me into music. Since we started mixing music for choreographies by ourselves, I could not be unaffected by the music production itself. Music and dance have an inherent connection, and this was the time when the first experiments, mixes and beats were born.",
+      "Shortly afterwards, I started to study Photography at art school in Košice. During my studies, I was successively leaning towards video production, since I was shooting and editing my own videos. In my free time, I devoted myself to the music and taught breaking at the dance school LMC in Košice.",
+      "Three years after starting my studies, things started twisting up a bit. I became a member of the Hasta La Muerte crew, one of the most successful and famous breaking crew in Slovakia. However, after persisting health issues, I had to give up dancing and my attention went to the music even more.",
+      "After graduation, I moved for a year to Manchester, UK. Once I returned home, I started my business that you have already read about in the beginning of this article. It was all in a full swing when 2020 and the pandemic came and struck many segments. One of the most affected areas was culture. I managed to go through this period as a Creative Producer at Deutsche Telekom.",
+      "I am honestly glad that art has accompanied me throughout my life. Thanks to art, I have opportunities to cooperate with successful people and companies that opened the door for me. I have visited 28 countries. I've got passionate about people and cultures that eventually became my greatest inspiration. For me, it is a real success - I love the job I do. Moreover, it is really a meaningful work.",
+      "Why did I create this website? After an unknown problem with Facebook, I lost all my fan pages. That's why I decided to collect my works all in one safe place. I have extensive experience and a decent portfolio. In this space, I want to share my skills, projects, tutorials, and advice with all of you who are looking for inspiration and motivation. Like many successful projects, this website is a result of teamwork. My sincere thanks go to Patrik Tóth for building the website, Laco Urbán for putting texts together and Anka Bobkova for English translation.",
+      "If you are interested in my service or if there is anything I could help you with, do not hesitate to contact me. I am looking forward to all the interaction and cooperation."
     ]
   }
 ]

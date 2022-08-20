@@ -132,7 +132,7 @@ export class DataService {
     );
   }
 
-  private loadPosts(): Observable<Post[]> {
+  loadPosts(): Observable<Post[]> {
     return this.http.get<IPost[]>(environment.base + `assets/data/blog.${this.translateService.currentLang}.json`).pipe(
       map(posts => posts.map(post => new Post(post))),
       tap(posts => {
