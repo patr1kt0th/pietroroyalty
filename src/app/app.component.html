@@ -11,16 +11,8 @@
     </ion-header>
     <ion-content>
       <ion-list lines="none" class="menu">
-        <ng-container *ngFor="let item of menu?.menu">
-          <ion-item *ngIf="item.route" button (click)="navigate(item.route)" detail="false">
-            <ion-icon color="primary" [name]="item.id"></ion-icon>
-          </ion-item>
-          <ion-item *ngIf="item.url" button [href]="item.url" detail="false">
-            <ion-icon color="primary" [name]="item.id"></ion-icon>
-          </ion-item>
-        </ng-container>
-        <ion-item *ngFor="let social of menu?.social" button detail="false" [href]="social.url">
-          <ion-icon [name]="'logo-' + social.id" slot="start" color="primary"></ion-icon>
+        <ion-item *ngFor="let item of menu?.items" button detail="false" [href]="item.url">
+          <ion-icon [name]="item.id" slot="start" color="primary"></ion-icon>
         </ion-item>
         <ion-item button detail="false" (click)="modeChanged()">
           <ion-icon color="primary" [name]="!nightMode ? 'moon-outline' : 'sunny-outline'"></ion-icon>

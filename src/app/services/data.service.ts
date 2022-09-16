@@ -120,12 +120,11 @@ export class DataService {
   }
 
   private loadMenu(): Observable<Menu> {
-    return this.http.get<{ menu: IMenuItem[]; social: MenuItem[] }>(environment.base + `assets/data/menu.json`).pipe(
+    return this.http.get<{ items: IMenuItem[] }>(environment.base + `assets/data/menu.json`).pipe(
       map(
-        items =>
+        m =>
           new Menu(
-            items.menu.map(i => new MenuItem(i.id, i.route, i.url)),
-            items.social.map(i => new MenuItem(i.id, i.route, i.url))
+            m.items.map(i => new MenuItem(i.id, i.route, i.url))
           )
       ),
       tap(menu => (this._menu = menu))

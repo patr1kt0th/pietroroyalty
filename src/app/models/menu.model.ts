@@ -14,5 +14,5 @@ export class MenuItem {
 }
 
 export class Menu {
-  constructor(public menu: MenuItem[], public social: MenuItem[]) {}
+  constructor(public items: MenuItem[]) {}
 }
