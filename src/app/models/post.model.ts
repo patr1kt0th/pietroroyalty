@@ -8,7 +8,9 @@ export interface IPost {
   title: string;
   date: string | Date;
   text: string | string[];
-  video?: string[];
+  slides?: boolean;
+  photos?: string[];
+  videos?: string[];
   tags: string[];
 }
 
@@ -19,7 +21,9 @@ export class Post {
   title: string;
   date: string | Date;
   text: string[];
-  video: string[];
+  slides = false;
+  photos?: string[];
+  videos?: string[];
   tags: Tag[];
 
   constructor(post: IPost) {
@@ -43,7 +47,11 @@ export class Post {
     } else {
       this.text = [post.text];
     }
-    this.video = post.video;
+    if (post.slides) {
+      this.slides = post.slides;
+    }
+    this.photos = post.photos;
+    this.videos = post.videos;
     this.tags = post.tags.map(t => new Tag(t));
   }
 
@@ -53,6 +61,10 @@ export class Post {
 
   getImageSrc(index: number): string {
     return environment.base + `assets/images/${this.images[index]}`;
+  }
+
+  getPhotoSrc(index: number): string {
+    return environment.base + `assets/photos/${this.photos[index]}`;
   }
 
   hasTags(tags: string[]): boolean {

@@ -17,6 +17,37 @@
     ]
   },
   {
+    "id": "t-star",
+    "preview": false,
+    "images": [
+      "t-star.jpg"
+    ],
+    "title": "Cesta ku oceneniu T-Star s Deutsche Telekom IT Solutions Slovakia",
+    "date": "2024-02-13",
+    "tags": [
+      "photo",
+      "video"
+    ],
+    "text": [
+      "V dynamickom svete umenia, fotografie a videa som si vybudoval povesť rôznorodými a pútavými projektmi. Mimo hudobných festivalov a podujatí som bezproblémovo spojil svoje umelecké schopnosti s korporátnou kreativitou, najmä počas štvorročnej spolupráce s Deutsche Telekom IT Solutions Slovakia.",
+      "Keď som sa v roku 2019 stal Creative Producerom pre Deutsche Telekom IT Solutions Slovakia - priniesol som do korporátneho sveta umeleckú víziu, obohacujúc projekty o umelecké inovácie. Počas štyroch rokov som ovplyvnil vizuálnu identitu spoločnosti, vložil som rozprávanie príbehov do firemných naratívov a premenil som komplexnú technológiu na presvedčivé príbehy.",
+      "Moje prínosy boli ocenené a nedávno som získal ocenenie programu T-Star. Moja práca, ktorú prezentujem tu na mojej webovej stránke, odráža harmóniu medzi umením a technológiou a ukazuje, ako spolupráca medzi umelcami a korporáciami môže priniesť výnimočné výsledky.",
+      "V ére, ktorá oceňuje takúto spoluprácu, moja cesta s Deutsche Telekom IT Solutions Slovakia ukazuje silné výsledky spájania kreatívnej energie s firemnými odbornými znalosťami, ktoré nanovo definujú hranice v umeleckom aj korporátnom prostredí."
+    ],
+    "slides": true,
+    "photos": [
+      "t-star_001.jpg",
+      "t-star_002.jpg"
+    ],
+    "video": [
+      "https://www.youtube.com/embed/1agR-BGKI9c?si=MksAqm7bvrcprE6S",
+      "https://www.youtube.com/embed/LjMpTBwIa0M?si=8YKflQeomshsUys3",
+      "https://www.youtube.com/embed/qKPI1of3Hhc?si=NpL-QcoHjRXzzNFY",
+      "https://www.youtube.com/embed/LDpXjoW98Y4?si=6VDNpMFJ8J8iDzAM",
+      "https://www.youtube.com/embed/WJs-cBFt2zs?si=LhSQmfPDYBVjyGdq"
+    ]
+  },
+  {
     "id": "burak-yeter",
     "preview": false,
     "images": [
@@ -40,6 +71,8 @@
       "Foto: <a href='https://www.instagram.com/bereczky_sandor'>@bereczky_sandor</a>"
     ],
     "video": [
+      "https://www.youtube.com/embed/tDwrZsX2_eI",
+      "https://www.youtube.com/embed/bETUAzww17o",
       "https://www.youtube.com/embed/utcYp-vgAX4",
       "https://www.youtube.com/embed/A_3KaPensHE",
       "https://www.youtube.com/embed/TJNtcLCLvek",
@@ -56,7 +89,10 @@
       "divider_003.jpg",
       "divider_004.jpg",
       "divider_005.jpg",
-      "divider_006.jpg"
+      "divider_006.jpg",
+      "divider_007.jpg",
+      "divider_008.jpg",
+      "divider_009.jpg"
     ],
     "title": "From Crates oddeľovače pre vinylové platne dizajnované mnou",
     "date": "2022-07-31",

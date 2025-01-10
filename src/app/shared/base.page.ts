@@ -16,7 +16,7 @@ export abstract class BasePage {
     protected loadingCtrl: LoadingController,
     protected translateService: TranslateService,
     protected dataService: DataService
-  ) {}
+  ) { }
 
   /* Platform */
 
@@ -30,6 +30,11 @@ export abstract class BasePage {
 
   get isPlatformIOS(): boolean {
     return this.platform.is('ios');
+  }
+
+  get isXsOrSm(): boolean {
+    console.log("width=" + window.innerWidth);
+    return Number(window.innerWidth) < 768;
   }
 
   /* Loader */

@@ -10,14 +10,15 @@
       </ion-button>
     </ion-buttons>
     <!-- <ion-title color="tertiary" class="ion-text-center ion-text-uppercase">Pietro Royalty</ion-title> -->
-    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase" (click)="goToHomePage()">{{ 'title' | translate }}</ion-title>
+    <ion-title color="tertiary" class="ion-text-center ion-text-uppercase" (click)="goToHomePage()">{{ 'title' |
+      translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen="true" scrollEvents="false">
   <ion-grid fixed="true">
     <ion-row>
-      <ion-col size="12" sizeMd="6" sizeLg="4" sizeXl="6">
+      <ion-col *ngIf="!isXsOrSm" size="12" sizeMd="6" sizeLg="4" sizeXl="6">
         <ion-card *ngIf="post && post.images.length === 1">
           <ion-img [src]="post.imageSrc"></ion-img>
         </ion-card>
@@ -44,22 +45,57 @@
           </ion-card-header>
           <ion-card-content>
             <ion-text *ngFor="let text of post.text" [innerHtml]="text" color="primary"></ion-text>
-            <div *ngIf="!!post.video">
-            <div *ngFor="let url of post.video" class="video-container">
-              <iframe class="video"
-                [src]="url | safe"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
+            <div *ngIf="isXsOrSm" class="image-container">
+              <ion-img *ngIf="post && post.images.length === 1" [src]="post.imageSrc"></ion-img>
+              <div *ngIf="post && post.images.length > 1" style="position: relative;">
+                <div *ngIf="isPlatformDesktop" class="arrow left" (click)="slidePrev()">
+                  <ion-icon name="chevron-back-circle"></ion-icon>
+                </div>
+                <div *ngIf="isPlatformDesktop" class="arrow right" (click)="slideNext()">
+                  <ion-icon name="chevron-forward-circle"></ion-icon>
+                </div>
+                <ion-slides #slider [pager]="!isPlatformDesktop">
+                  <ion-slide *ngFor="let image of post.images; index as i">
+                    <ion-img [src]="post.getImageSrc(i)"></ion-img>
+                  </ion-slide>
+                </ion-slides>
+              </div>
             </div>
+            <div *ngIf="!!post.photos">
+              <div *ngIf="!post.slides">
+                <div *ngFor="let url of post.photos; index as i" class="photos-container">
+                  <ion-img [src]="post.getPhotoSrc(i)"></ion-img>
+                </div>
+              </div>
+              <div *ngIf="post.slides" class="photos-container">
+                <ion-img *ngIf="post && post.photos.length === 1" [src]="post.photos[0]"></ion-img>
+                <div *ngIf="post && post.photos.length > 1" style="position: relative;">
+                  <div *ngIf="isPlatformDesktop" class="arrow left" (click)="slidePrev()">
+                    <ion-icon name="chevron-back-circle"></ion-icon>
+                  </div>
+                  <div *ngIf="isPlatformDesktop" class="arrow right" (click)="slideNext()">
+                    <ion-icon name="chevron-forward-circle"></ion-icon>
+                  </div>
+                  <ion-slides #slider [pager]="!isPlatformDesktop">
+                    <ion-slide *ngFor="let photo of post.photos; index as i">
+                      <ion-img [src]="post.getPhotoSrc(i)"></ion-img>
+                    </ion-slide>
+                  </ion-slides>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="!!post.videos">
+              <div *ngFor="let url of post.videos" class="videos-container">
+                <iframe class="videos" [src]="url | safe" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
             </div>
             <div class="post-info">
               <ion-label color="secondary" slot="start">{{ post.date | date: 'mediumDate' : '' : locale }}</ion-label>
               <div>
-                <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end" style="cursor: auto"
-                  >{{ tag.label | translate }}</ion-chip
-                >
+                <ion-chip *ngFor="let tag of post.tags" color="tertiary" slot="end" style="cursor: auto">{{ tag.label |
+                  translate }}</ion-chip>
               </div>
             </div>
           </ion-card-content>

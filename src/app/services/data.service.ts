@@ -82,7 +82,7 @@ export class DataService {
 
   async initializeData(locale: string): Promise<void> {
     this.translateService.setDefaultLang('en');
-    
+
     const storedLanguage = localStorage.getItem('pietroroyalty-language');
     if (storedLanguage) {
       this.language = storedLanguage;
@@ -124,7 +124,7 @@ export class DataService {
       map(
         m =>
           new Menu(
-            m.items.map(i => new MenuItem(i.id, i.route, i.url))
+            m.items.map(i => new MenuItem(i.id, i.src, i.route, i.url))
           )
       ),
       tap(menu => (this._menu = menu))

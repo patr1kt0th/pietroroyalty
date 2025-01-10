@@ -12,7 +12,9 @@
     <ion-content>
       <ion-list lines="none" class="menu">
         <ion-item *ngFor="let item of menu?.items" button detail="false" [href]="item.url">
-          <ion-icon [name]="item.id" slot="start" color="primary"></ion-icon>
+          <ion-icon *ngIf="item.id" [name]="item.id" slot="start" color="primary"></ion-icon>
+          <ion-icon *ngIf="item.src" [src]="!nightMode ? item.src.night : item.src.day" slot="start"
+            color="primary"></ion-icon>
         </ion-item>
         <ion-item button detail="false" (click)="modeChanged()">
           <ion-icon color="primary" [name]="!nightMode ? 'moon-outline' : 'sunny-outline'"></ion-icon>
@@ -20,7 +22,7 @@
         <ion-item button detail="false" (click)="switchLanguage()">
           <ion-text color="primary">{{ isEnLanguage ? 'SK' : 'EN' }}</ion-text>
         </ion-item>
-        </ion-list>
+      </ion-list>
     </ion-content>
   </ion-menu>
 
@@ -36,14 +38,8 @@
       </ion-toolbar>
     </ion-header>
     <ion-content>
-      <ion-searchbar
-        #searchbar
-        [(ngModel)]="filter.text"
-        (keyup.enter)="closeSearchMenu()"
-        (keyup.esc)="closeSearchMenu()"
-        (ionChange)="search()"
-        class="ion-padding-top"
-      ></ion-searchbar>
+      <ion-searchbar #searchbar [(ngModel)]="filter.text" (keyup.enter)="closeSearchMenu()"
+        (keyup.esc)="closeSearchMenu()" (ionChange)="search()" class="ion-padding-top"></ion-searchbar>
       <!-- <ion-list lines="none">
         <ion-item *ngFor="let tag of filter?.tags" button detail="false" (click)="tag.selected = !tag.selected">
           {{ tag.label | translate }}

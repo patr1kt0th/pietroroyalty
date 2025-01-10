@@ -52,7 +52,7 @@ export class PostPage extends BasePage implements OnInit {
       // setTimeout(() => {
       this.post = this.dataService.getPost(id);
       // this.trustedUrls = new Map<string, SafeResourceUrl>();
-      // this.post.video.forEach(url => this.trustedUrls.set(url, this.domSanitizer.bypassSecurityTrustUrl(url)));
+      // this.post.videos.forEach(url => this.trustedUrls.set(url, this.domSanitizer.bypassSecurityTrustUrl(url)));
       // }, DataService.MILLISECONDS_TO_WAIT);
     });
   }
@@ -134,7 +134,7 @@ export class PostPage extends BasePage implements OnInit {
           text: this.translateService.instant('button.close'),
           icon: 'close',
           role: 'cancel',
-          handler: () => {}
+          handler: () => { }
         }
       ]
     });

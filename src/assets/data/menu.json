@@ -1,16 +1,19 @@
 {
   "items": [
     {
-      "id": "logo-facebook",
-      "url": "https://facebook.com/pietroroyalty"
-    },
-    {
-      "id": "logo-twitter",
-      "url": "https://twitter.com/pietroroyalty"
-    },
-    {
       "id": "logo-instagram",
       "url": "https://instagram.com/pietroroyalty"
+    },
+    {
+      "src": {
+        "day": "/assets/icon/spotify.svg",
+        "night": "/assets/icon/spotify-dark.svg"
+      },
+      "url": "https://open.spotify.com/artist/0M1NVe5DZ4ZmYzJA2P3aqH"
+    },
+    {
+      "id": "logo-soundcloud",
+      "url": "https://soundcloud.com/pietroroyalty"
     },
     {
       "id": "mail-outline",
