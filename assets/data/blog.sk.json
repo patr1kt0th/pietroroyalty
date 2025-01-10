@@ -1,73 +1,138 @@
 [
   {
-    "id": "digitizing-old-video-tapes",
-    "preview": false,
-    "images": "VHS.jpg",
+    "id": "digitization-of-old-videotapes",
+    "preview": true,
+    "images": [
+      "vhs.jpg"
+    ],
     "title": "Digitalizácia starých videokaziet",
-    "date": "2022-06-02",
-    "tags": ["video"],
+    "date": "2022-03-15",
+    "tags": [
+      "video"
+    ],
     "text": [
-      "Takmer v každej domácnosti sa nachádza jedna, dve alebo aj niekoľko desiatok VHS kaziet či iných nosičov, ktoré si dnes veľmi často nemáme kde prehrať. Postupom času sa životnosť týchto nosičov kráti a klasická videokazeta stráca každým prehratím na kvalite. Ak nechceš prísť o vzácne zábery, ktoré ti pripomínajú detstvo, minulosť alebo iné dôležité chvíle, existuje riešenie.",
-      "Je ním úprava nahrávok do digitálnej podoby. Vďaka tomu si môžeš staré videá prehrať v aktuálne najpoužívanejšom formáte H.264 aj na Smart TV, PC, tablete, mobile alebo ich napríklad hodiť na YouTube a zdieľať so známymi. Vďaka efektívnej kompresii to môže byť zaujímavé aj pre tých, ktorí potrebujú úsporne archivovať, sťahovať alebo odosielať videonahrávky.",
-      "Ak máš doma záznamy vo formátoch VHS, VHS-C, Hi8 či, MiniDV, tvoj problém je takmer vyriešený. Neváhaj a kontaktuj ma na <a href='mailto:info@qoqmedia.com'>info@qoqmedia.com</a>."
+      "..."
+    ]
+  },
+  {
+    "id": "t-star",
+    "preview": false,
+    "images": [
+      "t-star.jpg"
+    ],
+    "title": "Cesta ku oceneniu T-Star s Deutsche Telekom IT Solutions Slovakia",
+    "date": "2024-02-13",
+    "tags": [
+      "photo",
+      "video"
+    ],
+    "text": [
+      "V dynamickom svete umenia, fotografie a videa som si vybudoval povesť rôznorodými a pútavými projektmi. Mimo hudobných festivalov a podujatí som bezproblémovo spojil svoje umelecké schopnosti s korporátnou kreativitou, najmä počas štvorročnej spolupráce s Deutsche Telekom IT Solutions Slovakia.",
+      "Keď som sa v roku 2019 stal Creative Producerom pre Deutsche Telekom IT Solutions Slovakia - priniesol som do korporátneho sveta umeleckú víziu, obohacujúc projekty o umelecké inovácie. Počas štyroch rokov som ovplyvnil vizuálnu identitu spoločnosti, vložil som rozprávanie príbehov do firemných naratívov a premenil som komplexnú technológiu na presvedčivé príbehy.",
+      "Moje prínosy boli ocenené a nedávno som získal ocenenie programu T-Star. Moja práca, ktorú prezentujem tu na mojej webovej stránke, odráža harmóniu medzi umením a technológiou a ukazuje, ako spolupráca medzi umelcami a korporáciami môže priniesť výnimočné výsledky.",
+      "V ére, ktorá oceňuje takúto spoluprácu, moja cesta s Deutsche Telekom IT Solutions Slovakia ukazuje silné výsledky spájania kreatívnej energie s firemnými odbornými znalosťami, ktoré nanovo definujú hranice v umeleckom aj korporátnom prostredí."
+    ],
+    "slides": true,
+    "photos": [
+      "/assets/images/t-star_001.jpg",
+      "/assets/images/t-star_002.jpg"
+    ],
+    "video": [
+      "https://www.youtube.com/embed/1agR-BGKI9c?si=MksAqm7bvrcprE6S",
+      "https://www.youtube.com/embed/LjMpTBwIa0M?si=8YKflQeomshsUys3",
+      "https://www.youtube.com/embed/qKPI1of3Hhc?si=NpL-QcoHjRXzzNFY",
+      "https://www.youtube.com/embed/LDpXjoW98Y4?si=6VDNpMFJ8J8iDzAM",
+      "https://www.youtube.com/embed/WJs-cBFt2zs?si=LhSQmfPDYBVjyGdq"
     ]
   },
   {
     "id": "burak-yeter",
-    "images": "Burak_Yeter.jpg",
-    "title": "Moja spolupráca so svetoznámym dj-om a producentom Burakom Yeterom",
-    "date": "2022-02-02",
-    "tags": ["video"],
+    "preview": false,
+    "images": [
+      "burak_yeter.jpg"
+    ],
+    "title": "Moja spolupráca so svetoznámym dj-om Burakom Yeterom",
+    "date": "2022-08-12",
+    "tags": [
+      "video"
+    ],
     "text": [
       "Počas svojej doterajšej kariéry som spolupracoval s mnohými umelcami. Jedna z najzaujímavejších spoluprác sa však začala v roku 2017.",
-      "Práve od toho obdobia totiž spolupracujem so svetoznámym DJ-om a producentom Burakom Yeterom prezývaným Mr. Tuesday. Hit Tuesday, ktorý má na YouTube viac ako 660-miliónov zhliadnutí, patrí k jeho najväčším a väčšina z vás ho veľmi dobre pozná, pretože slovenské rádiá mu poskytli veľký priestor. Na Instagrame má viac ako milión followerov a časopis DJ Mag ho v roku 2021 zaradil medzi 100 najlepších DJ-ov sveta, kde sa umiestnil na 82. mieste.",
-      "Rovnako ako väčšina výnimočných vecí, aj táto sa začala rodiť náhodne. V roku 2017 som mal telefonát od Twiinsiek, s ktorými som predtým točil videoklip, že Burak bude prvýkrát hrať v Budapešti a potrebuje poriešiť video z večernej akcie. Ponuku som prijal a vďaka tomu som sa s ním dostal do užšieho kontaktu.",
+      "Práve od toho obdobia totiž spolupracujem so svetoznámym DJ-om a producentom Burakom Yeterom. Jeho najznámejší hit, Tuesday, má na YouTube viac ako 700-miliónov zhliadnutí a väčšina z vás ho veľmi dobre pozná, pretože mu rádiá po celom svete poskytli veľký priestor. Na Instagrame má viac ako milión followerov a časopis DJ Mag ho v roku 2021 zaradil medzi 100 najlepších DJ-ov sveta.",
+      "Rovnako ako väčšina výnimočných vecí, aj táto sa začala rodiť náhodne. V roku 2017 som mal telefonát od Twiinsiek, s ktorými som predtým točil videoklip, že Burak bude prvýkrát hrať v Budapešti a potrebuje video z večernej akcie. Ponuku som prijal a vďaka tomu som sa s ním dostal do užšieho kontaktu.",
       "Moja práca sa mu veľmi páčila a netajil veľkú spokojnosť. Hneď po odovzdaní videa som od jeho manažéra dostal ponuku vycestovať na druhý deň do Švajčiarska a natočiť ďalšiu jeho šou. A tak sa naša spolupráca neustále vyvíjala.",
-      "Do dnešného dňa sme s Burakom natočili presne dvadsať krátkych videí, v ktorých sú zachytené najlepšie momenty z koncertov, cestovania, zákulisia najväčších európskych festivalov či pohľad na Burakovo „fungovanie“ pred a po vystúpení.",
-      "Spolu sme navštívili festivaly ako Tomorrowland, Sziget, Exit, Parookaville či Budapest Park. Na tých najväčších sa počas týždňa vystrieda viac ako pol milióna ľudí z približne dvesto krajín sveta.",
-      "Táto spolupráca mi okrem nových skúseností priniesla aj návštevy európskych veľkomiest a krajín ako Holandsko, Fínsko, Belgicko, Nemecko či Litva. Mal som možnosť zažiť neskutočne unikátnu atmosféru Faerských ostrovov nachádzajúcich sa v severnej časti Atlantického oceána. Bol to úžasný pracovný výlet a zážitok na celý život.",
-      "Spolupráca s Burakom počas jeho turné mi umožnila stretnúť sa priamo na pódiu alebo v zákulisí s takými svetovými hviezdami ako Macklemore, French Montana, Williy William, Dynoro, Fedde Le Grand alebo Deniz Koyu. A čo je dôležitejšie, naučila ma, ako byť profesionálom vo svojom fachu.",
-      "Som veľmi vďačný za túto šancu a skúsenosť. Okrem pracovného vzťahu sme sa s Burakom zblížili aj kamarátsky, čo je pri spolupráci takéhoto druhu vždy skvelé. Najviac ma teší, ak ma niekomu predstaví ako svojho najlepšieho video makera. Dôveruje mi a vie, že mu stále odovzdám ten najlepší materiál a zachytený moment, ktorý už nikdy nikto nevráti."
+      "Do dnešného dňa sme s Burakom natočili viac ako dvadsať krátkych videí, v ktorých sú zachytené najlepšie momenty z koncertov, cestovania, zákulisia najväčších európskych festivalov či pohľad na Burakovo „fungovanie“ pred a po vystúpení. Najlepšie momenty nájdeš pod článkom, ale všetky ostatné videá sú dostupné na jeho YouTube.",
+      "Spolu sme navštívili festivaly ako Tomorrowland, Sziget, Exit, Sunny Hill či Parookaville. Na tých najväčších sa počas týždňa vystrieda viac ako pol milióna ľudí z približne dvesto krajín sveta.",
+      "Táto spolupráca mi okrem nových skúseností priniesla aj návštevy európskych veľkomiest a krajín. Mal som možnosť zažiť neskutočne unikátnu atmosféru Faerských ostrovov nachádzajúcich sa v severnej časti Atlantického oceána. Bol to úžasný pracovný výlet a zážitok na celý život.",
+      "Spolupráca s Burakom počas jeho turné mi umožnila stretnúť sa priamo na pódiu alebo v zákulisí s takými svetovými hviezdami ako Dua Lipa, Macklemore, French Montana, John Newman alebo Willy William. A čo je dôležitejšie, naučila ma, ako byť profesionálom vo svojom fachu.",
+      "Som veľmi vďačný za túto šancu a skúsenosť. Okrem pracovného vzťahu sme sa s Burakom zblížili aj kamarátsky, čo je pri spolupráci takéhoto druhu vždy skvelé. Najviac ma teší, ak ma niekomu predstaví ako svojho najlepšieho video makera. Dôveruje mi a vie, že mu stále odovzdám ten najlepší materiál a zachytený moment, ktorý už nikdy nikto nevráti.",
+      "Foto: <a href='https://www.instagram.com/bereczky_sandor'>@bereczky_sandor</a>"
     ],
-    "video": ["https://www.youtube.com/embed/utcYp-vgAX4", "https://www.youtube.com/embed/TJNtcLCLvek"]
-  },
-  {
-    "id": "from-crates-oddelovace-pre-vinylove-platne",
-    "images": ["Divider_01.jpg", "Divider_02.jpg", "Divider_03.jpg", "Divider_04.jpg", "Divider_05.jpg", "Divider_06.jpg"],
-    "date": "2022-01-11",
-    "tags": ["music"],
-    "title": "From Crates oddeľovače pre vinylové platne",
-    "text": [
-      "Ak si svoju hudobnú zbierku neviete predstaviť bez vinylových LP platní, možno vás zaujme táto špecialita.",
-      "Určite to poznáte. Narýchlo potrebujete nájsť niektorú z vašich obľúbených platní, ale ako naschvál sa k nej neviete dopracovať. Postupom času vás prejde chuť aj trpezlivosť. Prinášam riešenie, ktoré vám uľahčí život, ušetrí čas a prinesie lepší prehľad o jednotlivých tituloch.",
-      "Ručne vyrobené drevené oddeľovače sa dajú ľahko umiestniť medzi jednotlivé platne. Ich veľkou výhodou je, že sú na nich zobrazené písmená, vďaka čomu si môžete svoju zbierku usporiadať v abecednom, ale aj inom, vami zvolenom poradí.",
-      "Tieto oddeľovače, ktoré sa medzi audiofilmi tešia veľkej obľube, sú určené pre 12-palcové platne.",
-      "Ak si chcete vychutnávať hudbu bez zbytočného a často odradzujúceho hľadania konkrétneho albumu, tak ste na správnom mieste.",
-      "Kontaktujte ma na <a href='mailto:info@pietroroyalty.com'>info@pietroroyalty.com</a>."
+    "video": [
+      "https://www.youtube.com/embed/tDwrZsX2_eI",
+      "https://www.youtube.com/embed/bETUAzww17o",
+      "https://www.youtube.com/embed/utcYp-vgAX4",
+      "https://www.youtube.com/embed/A_3KaPensHE",
+      "https://www.youtube.com/embed/TJNtcLCLvek",
+      "https://www.youtube.com/embed/FEedBvGViO4",
+      "https://www.youtube.com/embed/Kr-tJWgLZWY"
     ]
   },
   {
-    "id": "preco-som-zalozil-tento-web",
-    "images": "PIETRO_ROYALTY.jpg",
-    "title": "Prečo som založil tento web?",
-    "date": "2021-05-23",
-    "tags": ["photo", "video", "music"],
+    "id": "from-crates-vinyl-record-dividers",
+    "preview": false,
+    "images": [
+      "divider_001.jpg",
+      "divider_002.jpg",
+      "divider_003.jpg",
+      "divider_004.jpg",
+      "divider_005.jpg",
+      "divider_006.jpg",
+      "divider_007.jpg",
+      "divider_008.jpg",
+      "divider_009.jpg"
+    ],
+    "title": "From Crates oddeľovače pre vinylové platne dizajnované mnou",
+    "date": "2022-07-31",
+    "tags": [
+      "music"
+    ],
+    "text": [
+      "Ak si svoju hudobnú zbierku nevieš predstaviť bez vinylových LP platní, táto špecialita ťa určite zaujme.",
+      "Určite to poznáš. Narýchlo potrebuješ nájsť niektorú z tvojich obľúbených platní, ale ako naschvál sa k nej nevieš dopracovať. Postupom času ťa prejde chuť aj trpezlivosť. Prinášam riešenie, ktoré ti uľahčí život, ušetrí čas a dá lepší prehľad o jednotlivých tituloch.",
+      "27 laserom vyrezaných drevených oddeľovačov sa dá ľahko umiestniť medzi jednotlivé platne. Ich veľkou výhodou je, že sú na nich zobrazené písmená, vďaka čomu si môžete svoju zbierku usporiadať v abecednom, ale aj inom, zvolenom poradí.",
+      "Tieto oddeľovače, ktoré sa medzi audiofilmi tešia veľkej obľube, sú určené pre 12-palcové platne a dajú sa použiť horizontálne alebo vertikálne.",
+      "Ak si chceš vychutnávať hudbu bez zbytočného a často odradzujúceho hľadania konkrétneho albumu, tak si na správnom mieste.",
+      "Pre bližšie informácie kontaktuj: <a href='mailto:info@fromcrates.com'>info@fromcrates.com</a> alebo <a href='https://ebay.to/3zK77Vp'>KUPUJ TU</a>"
+    ]
+  },
+  {
+    "id": "why-did-i-create-this-website",
+    "preview": false,
+    "images": "pietro_royalty.jpg",
+    "title": "Prečo som založil túto webstránku?",
+    "date": "2022-04-15",
+    "tags": [
+      "music",
+      "photo",
+      "video"
+    ],
     "text": [
       "Volám sa Peter Takáč aka PIETRO ROYALTY.",
       "Mojím životom je umenie a všetko, čo je s ním spojené. Mám za sebou množstvo spoluprác a projektov s rôznymi domácimi a zahraničnými umelcami. Najradšej spomínam na tri turbulentné roky 2017 až 2020, počas ktorých som precestoval kus sveta spoločne so svetoznámym DJ-om Burakom Yeterom. Práve v tom čase mal vydaný veľmi úspešný singel Tuesday s viac ako pol miliardou zhliadnutí na YouTube. Na starosti som mal videoprodukciu počas jeho vystúpení na svetových festivaloch ako Tomorrowland, Sziget, Exit či Parrokaville.",
       "Popritom som sa venoval aj iným aktivitám. Točil som videoklipy pre Ega a MGbilityho, ktorý ma poveril aj hudobnou produkciou. Spolupracoval som aj na klipe pre rapovú skupinu H16. Okrem toho som sa ako kameraman alebo strihač zúčastnil na podujatiach Red Bull BC One, Battle of the Year, The Legits Blast či Hip Hop Žije.",
-      "V roku 2015 vznikla moja hudobná produkcia pre skupinu Forsomeone, produkoval som videoklip dnes už bývalej skupiny TWiiNS a ako kameraman som začal spolupracovať s The Legits.",
-      "V mojom portfóliu sa nachádzajú aj rôzne spoločnosti. Či už sú to slovenský Red Bull, sieť nemocníc Agel, CRH, KPMG alebo Jägermeister. Spoločne s MsKS som organizoval prvé dva ročníky kultúrno-umeleckého a športového festivalu Moldava Block Party, ktorý sa tešil veľkému úspechu a prilákal predovšetkým mladú generáciu.",
+      "V roku 2015 vznikla moja hudobná produkcia pre skupinu Forsomeone, produkoval som videoklip skupiny TWiiNS a ako kameraman som začal spolupracovať s The Legits.",
+      "V mojom portfóliu sa nachádzajú aj rôzne spoločnosti ako sú Red Bull, CRH, KPMG, GymBeam, Jägermeister, sieť nemocníc AGEL alebo UNLP Košice. Spoločne s MsKS som organizoval prvé dva ročníky kultúrno-umeleckého a športového festivalu Moldava Block Party, ktorý sa tešil veľkému úspechu a prilákal predovšetkým mladú generáciu.",
       "To je v skratke to naj, čo mám za sebou. Možno sa ale pýtaš, aký je môj príbeh.",
       "Narodil som sa v roku 1989. Umeleckú kariéru som odštartoval ešte ako tínedžer pod prezývkou B-Boy Genic. Odmalička som veľmi rád kreslil, čo viem najmä z rozprávania mojich rodičov. Zhruba ako desaťročného ma uchvátili graffity a práve toto bol môj prvý kontakt s hip-hopovou kultúrou, ktorá ma začala formovať a sprevádza ma až dodnes.",
       "V tom istom čase som sa stal najmladším členom vtedy ešte len krátko fungujúcej lokálnej breakingovej tanečnej skupiny Floor Rockers Crew. O päť rokov neskôr sme sa zúčastnili na Battle of the Year Slovakia, kde sme skončili na treťom mieste.",
       "Tak ako ma graffity priviedli k tancu, tak ma tanec nasmeroval k hudbe. Keďže sme si ku choreografiám museli mixovať piesne, stretu s hudobnou produkciou som sa nevyhol. Hudba a tanec patria neodmysliteľne k sebe a tak začali vznikať vlastné experimenty, mixy a prvé beaty.",
       "Krátko nato som nastúpil na Školu úžitkového výtvarníctva v Košiciach, kde som študoval odbor - fotografia. Počas štúdia som stále viac inklinoval k tvorbe videí, nakrúcal som a strihal vlastné videá. Vo voľnom čase som sa venoval hudbe a vyučoval som breaking v košickej tanečnej škole LMC.",
       "Tri roky po začiatku môjho štúdia sa veci začali vyvíjať zaujímavým spôsobom. Prišiel definitívny zlom. Stal som sa členom Hasta La Muerte, momentálne jednej z najúspešnejších a najznámejších breakingových crew na Slovensku. Po pretrvávajúcich zdravotných problémoch som však tanec musel takpovediac zavesiť na klinec a moju pozornosť ešte viac zamestnávala hudba.",
-      "Po úspešnom ukončení maturitného ročníka som sa na chvíľu presťahoval do anglického Manchestru. Po návrate domov som začal podnikať a postupne sa rozbehli spolupráce, o ktorých píšem hneď na začiatku. Všetko sa zdalo byť v poriadku, ale prišiel rok 2020 a tvrdý úder pre všetky segmenty. Jednou z najviac zasiahnutých oblastí bola a stále je - kultúra. Výsledkom je, že okrem produkovania môjho albumu svoj čas trávim v spoločnosti Deutsche Telekom ako kreatívny producent.",
-      "Som nesmierne vďačný, že ma umenie sprevádza celý život, že som bol v správny čas na správnom mieste. Práve vďaka umeniu mám možnosť spolupracovať s úspešnými ľuďmi a spoločnosťami, čo mi otvorilo dvere do sveta. Navštívil som 28 krajín. Spoznávanie ich kultúr a ľudí je pre mňa najväčšou inšpiráciou. Vnímam to ako veľký úspech. To, čo robím, ma baví. A čo je ešte dôležitejšie - má to zmysel.",
-      "Prečo som založil tento web? Facebook mi nedávno zrušil všetky moje fanpage, bez udania dôvodu. Preto som sa rozhodol, že bude lepšie, ak celú moju tvorbu a diela nájdete na jednom mieste. Mám bohaté skúsenosti a slušné portfólio. V tomto priestore sa chcem podeliť o moje zručnosti, projekty, návody a rady. Chcem ich prezentovať ľuďom, ktorí možno hľadajú inšpiráciu a motiváciu.",
-      "Ak máš záujem o moje služby alebo ťa zaujíma niečo, s čím by som ti mohol a vedel pomôcť, pokojne ma kontaktuj."
+      "Po úspešnom ukončení maturitného ročníka som sa na chvíľu presťahoval do anglického Manchestru. Po návrate domov som začal podnikať a postupne sa rozbehli spolupráce, o ktorých píšem hneď na začiatku. Všetko sa zdalo byť v poriadku, ale prišiel rok 2020 a tvrdý úder pre všetky segmenty. Jednou z najviac zasiahnutých oblastí bola kultúra. Toto neľahké obdobie mi pomohla preklenúť moja pozícia kreatívneho producenta v Deutsche Telekom.",
+      "Som nesmierne vďačný, že ma umenie sprevádza celý život, že som bol v správny čas na správnom mieste. Práve vďaka umeniu mám možnosť spolupracovať s úspešnými ľuďmi a spoločnosťami, čo mi otvorilo dvere do sveta. Navštívil som 28 krajín. Poznávanie kultúr a ľudí je pre mňa najväčšou inšpiráciou. Vnímam to ako veľký úspech. To, čo robím, ma baví. A čo je ešte dôležitejšie - má to zmysel.",
+      "Prečo som založil tento web? Po nešpecifikovanom probléme s Facebookom som prišiel o všetky moje fanpage. Preto som sa rozhodol, že bude lepšie, ak celú moju tvorbu a diela nájdete na jednom a bezpečnom mieste. Mám bohaté skúsenosti a slušné portfólio. V tomto priestore sa chcem podeliť o moje zručnosti, projekty, návody a rady. Chcem ich prezentovať ľuďom, ktorí možno hľadajú inšpiráciu a motiváciu. Rovnako ako mnohé úspešné projekty, aj tento priestor je dielom tímovej práce. Za samotný web veľká vďaka Patrikovi Tóthovi, za texty Lacovi Urbánovi a za anglický preklad Anke Bobkovej.",
+      "Ak máš záujem o moje služby alebo ťa zaujíma niečo, s čím by som ti mohol pomôcť, pokojne ma kontaktuj."
     ]
   }
 ]
