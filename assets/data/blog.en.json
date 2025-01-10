@@ -36,8 +36,8 @@
     ],
     "slides": true,
     "photos": [
-      "/assets/images/t-star_001.jpg",
-      "/assets/images/t-star_002.jpg"
+      "t-star_001.jpg",
+      "t-star_002.jpg"
     ],
     "video": [
       "https://www.youtube.com/embed/1agR-BGKI9c?si=MksAqm7bvrcprE6S",
