@@ -6,8 +6,8 @@
     },
     {
       "src": {
-        "day": "/assets/icon/spotify.svg",
-        "night": "/assets/icon/spotify-dark.svg"
+        "light": "spotify-light.svg",
+        "dark": "spotify-dark.svg"
       },
       "url": "https://open.spotify.com/artist/0M1NVe5DZ4ZmYzJA2P3aqH"
     },
