@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
   menu: Menu;
 
   isEnLanguage = true;
-  nightMode = false;
+  darkMode = false;
 
   filter: Filter = new Filter(null);
   filterSubscription: Subscription;
@@ -50,11 +50,11 @@ export class AppComponent implements OnInit, OnDestroy {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
 
-      this.router.events.subscribe((event) => {
-        if (event instanceof NavigationEnd) {
-          gtag('config', 'UA-87277907-1', { 'page_path': event.urlAfterRedirects });
-        }      
-      });
+      // this.router.events.subscribe((event) => {
+      //   if (event instanceof NavigationEnd) {
+      //     gtag('config', 'UA-87277907-1', { 'page_path': event.urlAfterRedirects });
+      //   }
+      // });
 
       await this.dataService.initializeData(getUserLocale());
       this.menu = this.dataService.menu;
@@ -72,7 +72,7 @@ export class AppComponent implements OnInit, OnDestroy {
     registerLocaleData(enLocale, 'en-GB');
     registerLocaleData(skLocale, 'sk-SK');
 
-    this.nightMode = document.body.classList.contains('dark');
+    this.darkMode = document.body.classList.contains('dark');
   }
 
   ngOnDestroy(): void {
@@ -118,8 +118,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   modeChanged() {
-    this.nightMode = !this.nightMode;
-    document.body.classList.toggle('dark', this.nightMode);
+    this.darkMode = !this.darkMode;
+    document.body.classList.toggle('dark', this.darkMode);
   }
 
   switchLanguage() {

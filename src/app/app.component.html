@@ -13,11 +13,10 @@
       <ion-list lines="none" class="menu">
         <ion-item *ngFor="let item of menu?.items" button detail="false" [href]="item.url">
           <ion-icon *ngIf="item.id" [name]="item.id" slot="start" color="primary"></ion-icon>
-          <ion-icon *ngIf="item.src" [src]="!nightMode ? item.src.night : item.src.day" slot="start"
-            color="primary"></ion-icon>
+          <ion-icon *ngIf="item.src" [src]="item.getIconSrc(darkMode)" slot="start" color="primary"></ion-icon>
         </ion-item>
         <ion-item button detail="false" (click)="modeChanged()">
-          <ion-icon color="primary" [name]="!nightMode ? 'moon-outline' : 'sunny-outline'"></ion-icon>
+          <ion-icon color="primary" [name]="!darkMode ? 'moon-outline' : 'sunny-outline'"></ion-icon>
         </ion-item>
         <ion-item button detail="false" (click)="switchLanguage()">
           <ion-text color="primary">{{ isEnLanguage ? 'SK' : 'EN' }}</ion-text>

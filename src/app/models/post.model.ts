@@ -8,6 +8,7 @@ export interface IPost {
   title: string;
   date: string | Date;
   text: string | string[];
+  instagram?: string[];
   slides?: boolean;
   photos?: string[];
   videos?: string[];
@@ -21,6 +22,7 @@ export class Post {
   title: string;
   date: string | Date;
   text: string[];
+  instagram?: string[];
   slides = false;
   photos?: string[];
   videos?: string[];
@@ -47,6 +49,7 @@ export class Post {
     } else {
       this.text = [post.text];
     }
+    this.instagram = post.instagram;
     if (post.slides) {
       this.slides = post.slides;
     }

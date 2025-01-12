@@ -77,7 +77,7 @@ export class DataService {
   }
 
   get filterObservable(): Observable<Filter> {
-    return this._filter.asObservable();
+    return this._filter; //.asObservable();
   }
 
   async initializeData(locale: string): Promise<void> {
@@ -116,7 +116,7 @@ export class DataService {
   }
 
   get postsObservable(): Observable<Post[]> {
-    return this._posts.asObservable();
+    return this._posts; //.asObservable();
   }
 
   private loadMenu(): Observable<Menu> {

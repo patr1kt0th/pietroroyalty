@@ -62,6 +62,7 @@ ion-header.header {
   border-bottom-width: 1px;
   border-bottom-color: var(--ion-color-medium);
 }
+
 .plt-desktop ion-header.header {
   ion-title {
     font-size: 16px;
@@ -80,6 +81,7 @@ ion-header.header {
 /* Menu */
 
 .ios {
+
   ion-list.menu,
   ion-list.social,
   ion-list.settings {
@@ -122,6 +124,7 @@ ion-card {
       margin-right: 0;
     }
   }
+
   ion-item::part(native) {
     padding-left: 0;
 
@@ -185,6 +188,7 @@ ion-card {
 
 /* Slides */
 ion-slides {
+
   // .swiper-pagination-bullet-active {
   //   background: var(--ion-color-tertiary);
   // }

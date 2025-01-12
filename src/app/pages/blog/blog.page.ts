@@ -21,7 +21,7 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
   filterSubscription: Subscription;
   filter: Filter;
 
-  nightMode: boolean;
+  darkMode: boolean;
 
   constructor(
     protected menuCtrl: MenuController,
@@ -37,12 +37,16 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.postsSubscription = this.dataService.postsObservable.subscribe(posts => {
-      this.posts = posts.filter(post => !post.preview);
+      if (posts) {
+        this.posts = posts.filter(post => !post.preview);
+      } else {
+        console.error("Posts could not be leaded");
+      }
     });
 
     this.filterSubscription = this.dataService.filterObservable.subscribe(filter => (this.filter = filter));
 
-    this.nightMode = document.body.classList.contains('dark');
+    this.darkMode = document.body.classList.contains('dark');
   }
 
   ngOnDestroy(): void {
@@ -55,8 +59,8 @@ export class BlogPage extends BasePage implements OnInit, OnDestroy {
   }
 
   modeChanged() {
-    this.nightMode = !this.nightMode;
-    document.body.classList.toggle('dark', this.nightMode);
+    this.darkMode = !this.darkMode;
+    document.body.classList.toggle('dark', this.darkMode);
   }
 
   get isEnLanguage(): boolean {

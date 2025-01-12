@@ -44,11 +44,10 @@ ion-card {
   cursor: pointer;
 }
 
-.image-container {
-  margin-top: 16px;
-}
-
-.photos-container {
+.image-container,
+.instagram-container,
+.photos-container,
+.videos-container {
   margin-top: 16px;
 }
 
@@ -56,7 +55,6 @@ ion-card {
   position: relative;
   width: 100%;
   padding-top: 56.25%;
-  margin-top: 16px;
 }
 
 .videos {
@@ -78,6 +76,12 @@ ion-card {
 //     padding: 10px 0;
 //   }
 // }
+
+@media (max-width: 576px) {
+  ion-grid>ion-row>ion-col:first-of-type ion-card {
+    padding-top: 16px;
+  }
+}
 
 @media (min-width: 768px) {
   ion-card {

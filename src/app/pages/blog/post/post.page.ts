@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 // import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import {
@@ -21,7 +22,7 @@ import { BasePage } from 'src/app/shared/base.page';
   templateUrl: './post.page.html',
   styleUrls: ['./post.page.scss']
 })
-export class PostPage extends BasePage implements OnInit {
+export class PostPage extends BasePage implements OnInit { //, AfterViewInit {
   postId: any;
   post: Post;
   // trustedUrls: Map<string, SafeResourceUrl>;
@@ -29,6 +30,8 @@ export class PostPage extends BasePage implements OnInit {
   @ViewChild('slider') slider: IonSlides;
 
   constructor(
+    // @Inject(DOCUMENT) private readonly document,
+    // private readonly elementRef: ElementRef,
     protected platform: Platform,
     protected menuCtrl: MenuController,
     protected alertCtrl: AlertController,
@@ -56,6 +59,27 @@ export class PostPage extends BasePage implements OnInit {
       // }, DataService.MILLISECONDS_TO_WAIT);
     });
   }
+
+  // ngAfterViewInit() {
+  //   const s = this.document.createElement("script");
+  //   s.type = "text/javascript";
+  //   s.src = "//www.instagram.com/embed.js";
+
+  //   const __this = this;
+  //   s.onload = function () { __this.afterScriptAdded(); };
+
+  //   this.elementRef.nativeElement.appendChild(s);
+  // }
+
+  // afterScriptAdded() {
+  //   const params= {
+  //     width: '350px',
+  //     height: '420px',
+  //   };
+  //   if (typeof (window['functionFromExternalScript']) === 'function') {
+  //     window['functionFromExternalScript'](params);
+  //   }
+  // }
 
   goToHomePage() {
     this.router.navigateByUrl("/");
