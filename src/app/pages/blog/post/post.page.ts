@@ -1,28 +1,33 @@
-import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 // import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import {
+  ActionSheetController,
+  AlertController,
+  IonSlides,
+  LoadingController,
   MenuController,
   Platform,
-  AlertController,
-  ToastController,
-  LoadingController,
   PopoverController,
-  ActionSheetController,
-  IonSlides
+  ToastController
 } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Post } from 'src/app/models/post.model';
 import { DataService } from 'src/app/services/data.service';
 import { BasePage } from 'src/app/shared/base.page';
 
+declare namespace instgrm {
+  namespace Embeds {
+    function process(): void;
+  }
+}
+
 @Component({
   selector: 'app-post',
   templateUrl: './post.page.html',
   styleUrls: ['./post.page.scss']
 })
-export class PostPage extends BasePage implements OnInit { //, AfterViewInit {
+export class PostPage extends BasePage implements OnInit, AfterViewInit {
   postId: any;
   post: Post;
   // trustedUrls: Map<string, SafeResourceUrl>;
@@ -58,6 +63,13 @@ export class PostPage extends BasePage implements OnInit { //, AfterViewInit {
       // this.post.videos.forEach(url => this.trustedUrls.set(url, this.domSanitizer.bypassSecurityTrustUrl(url)));
       // }, DataService.MILLISECONDS_TO_WAIT);
     });
+  }
+
+  ngAfterViewInit() {
+    console.log("instgrm", window["instgrm"]);
+    if (window["instgrm"]) {
+      instgrm.Embeds.process();
+    }
   }
 
   // ngAfterViewInit() {
